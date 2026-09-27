@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 26 September 2026</p>
+      <p class="meta">Effective 27 September 2026</p>
 
       <p>This policy explains what information the PackSmart app for iPhone and iPad (“PackSmart”, “the app”) handles, why, and your choices. PackSmart is built to keep your trips on your device: we do not run our own servers and we do not sell your data.</p>
 
@@ -42,7 +42,7 @@
           <tr><td>Trips, packing lists, templates, settings</td><td>What you enter; language, theme and reminder settings</td><td>Only on your device</td></tr>
           <tr><td>Optional sign-in (Apple or Google)</td><td>Name, email address, account identifier</td><td>Google Firebase Authentication</td></tr>
           <tr><td>AI Trip Planner (Premium)</td><td>The trip description you type</td><td>Google Gemini, via Firebase AI Logic</td></tr>
-          <tr><td>Destination weather (Premium)</td><td>Destination name and trip dates</td><td>Open-Meteo</td></tr>
+          <tr><td>Destination weather (Premium)</td><td>Destination name; its location</td><td>Apple Maps and Apple Weather (WeatherKit)</td></tr>
           <tr><td>Purchases</td><td>Purchase status</td><td>Apple (we never see payment details)</td></tr>
           <tr><td>Ads (free version only)</td><td>Device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
           <tr><td>App integrity</td><td>Device attestation token</td><td>Apple App Attest and Google Firebase App Check</td></tr>
@@ -61,7 +61,7 @@
       <p>When you use the AI Trip Planner, the text you type (for example “5 days in Rome with museums”) and the app language are sent to Google's Gemini model through Google Firebase AI Logic to generate a plan. Nothing else from the app — no trips, travelers or account details — is included. Google processes this content under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Additional Terms of Service</a> for paid services: Google does not use it to improve its products and keeps it only for a limited time to detect abuse. Please don't include personal or sensitive information in your trip description. If the AI service can't be reached, the plan is created on your device instead.</p>
 
       <h2>6. Destination weather (Premium)</h2>
-      <p>To show a forecast and packing suggestions, the destination name is sent to the Open-Meteo geocoding service and the resulting coordinates and trip dates to the Open-Meteo forecast service. No account or identifier is sent. Open-Meteo receives your IP address as part of any internet request; see the <a href="https://open-meteo.com/en/terms">Open-Meteo terms and privacy information</a>.</p>
+      <p>To show a forecast and packing suggestions, the destination name you entered is looked up with Apple Maps, and the destination's coordinates are sent to Apple Weather (WeatherKit). This is the destination's location, not yours: PackSmart never accesses your device's location. No account or identifier is sent. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> and <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather's data sources</a>.</p>
 
       <h2>7. Purchases</h2>
       <p>PackSmart Premium is sold through Apple's App Store. Apple processes payments; we never receive your payment details. The app checks your purchase status with Apple to unlock Premium. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
@@ -91,7 +91,7 @@
       </ul>
 
       <h2>13. Retention</h2>
-      <p>Data on your device stays there until you delete it or the app. Your account data is kept until you delete the account. Our service providers keep data according to their own policies: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
+      <p>Data on your device stays there until you delete it or the app. Your account data is kept until you delete the account. Our service providers keep data according to their own policies: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
       <h2>14. International transfers</h2>
       <p>Google and Apple may process data outside your country, including in the United States. These transfers are covered by the providers' safeguards, such as the EU–U.S. Data Privacy Framework and the European Commission's Standard Contractual Clauses.</p>
@@ -113,7 +113,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confidențialitate</h1>
-      <p class="meta">În vigoare din 26 septembrie 2026</p>
+      <p class="meta">În vigoare din 27 septembrie 2026</p>
 
       <p>Această politică explică ce informații folosește aplicația PackSmart pentru iPhone și iPad („PackSmart”, „aplicația”), de ce și ce opțiuni aveți. PackSmart este construită să vă păstreze călătoriile pe dispozitiv: nu avem servere proprii și nu vindem datele dvs.</p>
 
@@ -128,7 +128,7 @@
           <tr><td>Călătorii, liste de bagaje, șabloane, setări</td><td>Ce introduceți; limba, tema și setările memento-urilor</td><td>Doar pe dispozitivul dvs.</td></tr>
           <tr><td>Autentificare opțională (Apple sau Google)</td><td>Nume, adresă de e-mail, identificator de cont</td><td>Google Firebase Authentication</td></tr>
           <tr><td>Planificator AI (Premium)</td><td>Descrierea călătoriei pe care o scrieți</td><td>Google Gemini, prin Firebase AI Logic</td></tr>
-          <tr><td>Vremea la destinație (Premium)</td><td>Numele destinației și datele călătoriei</td><td>Open-Meteo</td></tr>
+          <tr><td>Vremea la destinație (Premium)</td><td>Numele destinației; locația acesteia</td><td>Apple Maps și Apple Weather (WeatherKit)</td></tr>
           <tr><td>Achiziții</td><td>Starea achiziției</td><td>Apple (nu vedem niciodată datele de plată)</td></tr>
           <tr><td>Reclame (doar versiunea gratuită)</td><td>Date despre dispozitiv și interacțiunea cu reclamele, locația aproximativă din adresa IP, opțiunea de consimțământ</td><td>Google AdMob</td></tr>
           <tr><td>Integritatea aplicației</td><td>Token de atestare a dispozitivului</td><td>Apple App Attest și Google Firebase App Check</td></tr>
@@ -147,7 +147,7 @@
       <p>Când folosiți planificatorul AI, textul scris de dvs. (de exemplu „5 zile la Roma cu muzee”) și limba aplicației sunt trimise modelului Gemini de la Google, prin Google Firebase AI Logic, pentru a genera un plan. Nu se trimite nimic altceva din aplicație — nici călătorii, nici călători, nici date de cont. Google prelucrează acest conținut conform <a href="https://ai.google.dev/gemini-api/terms">Termenilor suplimentari Gemini API</a> pentru serviciile plătite: Google nu îl folosește pentru a-și îmbunătăți produsele și îl păstrează doar pentru o perioadă limitată, pentru a detecta abuzurile. Vă rugăm să nu includeți informații personale sau sensibile în descriere. Dacă serviciul AI nu este disponibil, planul este creat pe dispozitiv.</p>
 
       <h2>6. Vremea la destinație (Premium)</h2>
-      <p>Pentru prognoză și sugestii de bagaje, numele destinației este trimis serviciului de geocodare Open-Meteo, iar coordonatele rezultate și datele călătoriei serviciului de prognoză Open-Meteo. Nu se trimite niciun cont sau identificator. Open-Meteo primește adresa IP ca parte a oricărei cereri pe internet; consultați <a href="https://open-meteo.com/en/terms">termenii și informațiile de confidențialitate Open-Meteo</a>.</p>
+      <p>Pentru prognoză și sugestii de bagaje, numele destinației introdus de dvs. este căutat cu Apple Maps, iar coordonatele destinației sunt trimise către Apple Weather (WeatherKit). Este locația destinației, nu a dvs.: PackSmart nu accesează niciodată locația dispozitivului. Nu se trimite niciun cont sau identificator. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a> și <a href="https://weatherkit.apple.com/legal-attribution.html">sursele de date Apple Weather</a>.</p>
 
       <h2>7. Achiziții</h2>
       <p>PackSmart Premium se vinde prin App Store. Apple procesează plățile; nu primim niciodată datele de plată. Aplicația verifică la Apple starea achiziției pentru a debloca Premium. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a>.</p>
@@ -177,7 +177,7 @@
       </ul>
 
       <h2>13. Păstrarea datelor</h2>
-      <p>Datele de pe dispozitiv rămân acolo până le ștergeți sau dezinstalați aplicația. Datele contului sunt păstrate până la ștergerea contului. Furnizorii noștri păstrează datele conform propriilor politici: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
+      <p>Datele de pe dispozitiv rămân acolo până le ștergeți sau dezinstalați aplicația. Datele contului sunt păstrate până la ștergerea contului. Furnizorii noștri păstrează datele conform propriilor politici: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
       <h2>14. Transferuri internaționale</h2>
       <p>Google și Apple pot prelucra date în afara țării dvs., inclusiv în Statele Unite. Aceste transferuri sunt acoperite de garanțiile furnizorilor, precum Cadrul UE–SUA privind protecția datelor și Clauzele contractuale standard ale Comisiei Europene.</p>
