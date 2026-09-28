@@ -1,0 +1,5 @@
+# app-ads.txt for packsmart.review — declares authorized digital sellers
+# for PackSmart's ad inventory (IAB app-ads.txt spec).
+# AdMob publisher ID matches the app's real, configured GADApplicationIdentifier
+# (ca-app-pub-9223190332560627~5380074289) — see AdServing.swift.
+google.com, pub-9223190332560627, DIRECT, f08c47fec0942fa0
