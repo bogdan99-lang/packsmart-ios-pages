@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy &mdash; Android</h1>
-      <p class="meta">Effective 10 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
+      <p class="meta">Effective 11 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
 
       <p>This policy explains what information the PackSmart app for Android (&ldquo;PackSmart&rdquo;, &ldquo;the app&rdquo;) handles, why, and your choices. PackSmart keeps your trips on your device by default. Only when you choose to invite people to a trip or to share a packing list by link is that trip or list also stored on Google Firebase, which we use as our backend. We do not sell your data.</p>
 
@@ -41,6 +41,7 @@
         <tbody>
           <tr><td>Trips, packing lists, templates, settings</td><td>What you enter; language, theme and reminder settings</td><td>Only on your device</td></tr>
           <tr><td>Optional sign-in (Google)</td><td>Name, email address, profile photo URL, account identifier</td><td>Google Firebase Authentication</td></tr>
+          <tr><td>Free Premium template gift (requires sign-in)</td><td>The key of the template you chose and the date you chose it</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>AI Trip Planner (Premium)</td><td>The trip description you type</td><td>Google Gemini, via Firebase AI Logic</td></tr>
           <tr><td>Destination weather (Premium)</td><td>Destination name and its coordinates</td><td>Open-Meteo</td></tr>
           <tr><td>Home map and destination photos</td><td>Map: none from your trips, only map tiles; photos: destination name and coordinates</td><td>Google Maps; Wikipedia and Wikimedia Commons (Wikimedia Foundation)</td></tr>
@@ -58,6 +59,7 @@
 
       <h2>4. Optional account (Google Sign-In)</h2>
       <p>You can use PackSmart without an account. If you choose to sign in, authentication is handled by Google Firebase Authentication with Google Sign-In. We receive your name, email address, profile photo URL and an account identifier. Signing in does not by itself upload your trips and does not grant Premium; trips leave your device only if you use collaboration or list sharing (sections 8 and 9).</p>
+      <p>If you are signed in and claim the one-time free Premium template (Settings &rarr; Your PackSmart Gift), PackSmart saves which template you chose &mdash; its internal key, such as <em>hiking-wilderness</em> &mdash; and the date you chose it with your account on Google Firebase, so that it is restored if you reinstall the app or sign in on another device and so that only one template can be claimed per account. It is not linked to any review, rating or purchase, and it is deleted together with your account.</p>
       <p>You can delete your account at any time in <strong>Settings &rarr; Delete Account</strong>, or by following the steps on the <a href="https://packsmart-a6d26.web.app/data/delete-account.html">account deletion page</a>. This deletes your Firebase account, the shared trips you own, the invitation links and the shared list links you created, removes you from the trips you joined, and removes the trips stored on your device. Your Google account and your Google Play purchases are not affected.</p>
 
       <h2>5. AI Trip Planner (Premium)</h2>
@@ -127,7 +129,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confiden&#539;ialitate &mdash; Android</h1>
-      <p class="meta">&Icirc;n vigoare din 10 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
+      <p class="meta">&Icirc;n vigoare din 11 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
 
       <p>Aceast&#259; politic&#259; explic&#259; ce informa&#539;ii folose&#537;te aplica&#539;ia PackSmart pentru Android (&bdquo;PackSmart&rdquo;, &bdquo;aplica&#539;ia&rdquo;), de ce &#537;i ce op&#539;iuni ave&#539;i. PackSmart v&#259; p&#259;streaz&#259; implicit c&#259;l&#259;toriile pe dispozitiv. Doar atunci c&acirc;nd alege&#539;i s&#259; invita&#539;i persoane la o c&#259;l&#259;torie sau s&#259; partaja&#539;i o list&#259; de bagaje prin link, c&#259;l&#259;toria sau lista respectiv&#259; este stocat&#259; &#537;i &icirc;n Google Firebase, pe care &icirc;l folosim ca backend. Nu v&#259; vindem datele.</p>
 
@@ -141,6 +143,7 @@
         <tbody>
           <tr><td>C&#259;l&#259;torii, liste de bagaje, &#537;abloane, set&#259;ri</td><td>Ce introduce&#539;i; limba, tema &#537;i set&#259;rile memento-urilor</td><td>Doar pe dispozitivul dvs.</td></tr>
           <tr><td>Autentificare op&#539;ional&#259; (Google)</td><td>Nume, adres&#259; de e-mail, adresa URL a pozei de profil, identificator de cont</td><td>Google Firebase Authentication</td></tr>
+          <tr><td>Cadou: &#537;ablon Premium gratuit (necesit&#259; autentificare)</td><td>Cheia &#537;ablonului ales &#537;i data alegerii</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Planificator AI (Premium)</td><td>Descrierea c&#259;l&#259;toriei pe care o scrie&#539;i</td><td>Google Gemini, prin Firebase AI Logic</td></tr>
           <tr><td>Vremea la destina&#539;ie (Premium)</td><td>Numele destina&#539;iei &#537;i coordonatele ei</td><td>Open-Meteo</td></tr>
           <tr><td>Harta de pe ecranul principal &#537;i fotografiile destina&#539;iilor</td><td>Harta: nimic din c&#259;l&#259;toriile dvs., doar por&#539;iuni de hart&#259;; fotografii: numele destina&#539;iei &#537;i coordonatele</td><td>Google Maps; Wikipedia &#537;i Wikimedia Commons (Funda&#539;ia Wikimedia)</td></tr>
@@ -158,6 +161,7 @@
 
       <h2>4. Cont op&#539;ional (Google Sign-In)</h2>
       <p>Pute&#539;i folosi PackSmart f&#259;r&#259; cont. Dac&#259; alege&#539;i s&#259; v&#259; autentifica&#539;i, autentificarea este gestionat&#259; de Google Firebase Authentication prin Google Sign-In. Prim&#259;m numele, adresa de e-mail, adresa URL a pozei de profil &#537;i un identificator de cont. Autentificarea nu &icirc;ncarc&#259;, &icirc;n sine, c&#259;l&#259;toriile &#537;i nu ofer&#259; Premium; c&#259;l&#259;toriile p&#259;r&#259;sesc dispozitivul doar dac&#259; folosi&#539;i colaborarea sau partajarea listelor (sec&#539;iunile 8 &#537;i 9).</p>
+      <p>Dac&#259; sunte&#539;i autentificat &#537;i alege&#539;i &#537;ablonul Premium gratuit, oferit o singur&#259; dat&#259; (Set&#259;ri &rarr; Cadoul t&#259;u PackSmart), PackSmart salveaz&#259; &icirc;n contul dvs. din Google Firebase care &#537;ablon a&#539;i ales &mdash; cheia lui intern&#259;, de exemplu <em>hiking-wilderness</em> &mdash; &#537;i data alegerii, pentru a fi restabilit dac&#259; reinstala&#539;i aplica&#539;ia sau v&#259; autentifica&#539;i pe alt dispozitiv &#537;i pentru ca un singur &#537;ablon s&#259; poat&#259; fi ales per cont. Nu este legat de nicio recenzie, evaluare sau achizi&#539;ie &#537;i se &#537;terge odat&#259; cu contul.</p>
       <p>V&#259; pute&#539;i &#537;terge contul oric&acirc;nd din <strong>Set&#259;ri &rarr; &#536;terge contul</strong> sau urm&acirc;nd pa&#537;ii de pe <a href="https://packsmart-a6d26.web.app/data/delete-account.html">pagina de &#537;tergere a contului</a>. Se &#537;terg contul Firebase, c&#259;l&#259;toriile partajate pe care le de&#539;ine&#539;i, linkurile de invita&#539;ie &#537;i linkurile pentru liste create de dvs.; sunte&#539;i elimina&#539;i din c&#259;l&#259;toriile la care v-a&#539;i al&#259;turat, iar c&#259;l&#259;toriile stocate pe dispozitiv se &#537;terg. Contul dvs. Google &#537;i achizi&#539;iile Google Play nu sunt afectate.</p>
 
       <h2>5. Planificatorul AI (Premium)</h2>
