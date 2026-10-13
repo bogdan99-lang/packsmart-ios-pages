@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 11 October 2026 &middot; This policy covers the PackSmart app for iPhone and iPad. For Android, see the <a href="privacy-android.html">Android Privacy Policy</a>.</p>
+      <p class="meta">Effective 12 October 2026 &middot; This policy covers the PackSmart app for iPhone and iPad. For Android, see the <a href="privacy-android.html">Android Privacy Policy</a>.</p>
 
       <p>This policy explains what information the PackSmart app for iPhone and iPad (“PackSmart”, “the app”) handles, why, and your choices. PackSmart keeps your trips on your device by default. Only when you choose to invite people to a trip or to share a packing list by link is that trip or list also stored on Google Firebase, which we use as our backend. We do not sell your data.</p>
 
@@ -45,20 +45,22 @@
           <tr><td>AI Trip Planner (Premium)</td><td>The trip description you type</td><td>Google Gemini, via Firebase AI Logic</td></tr>
           <tr><td>Destination weather (Premium)</td><td>Destination name; its location</td><td>Apple Maps and Apple Weather (WeatherKit)</td></tr>
           <tr><td>Home map and destination photos</td><td>Destination name and its coordinates</td><td>Apple Maps; Wikipedia and Wikimedia Commons (Wikimedia Foundation)</td></tr>
-          <tr><td>Collaboration (Premium, requires sign-in)</td><td>The shared trip: destination, dates, trip types, activities, luggage, travelers, items; member names</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
-          <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage, duration, travelers' names, items</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Destination suggestions</td><td>The text you type in the destination field (from 3 characters)</td><td>Apple Maps</td></tr>
+          <tr><td>Photos on packing items (optional)</td><td>A photo you take or choose for an item</td><td>Only on your device (never uploaded)</td></tr>
+          <tr><td>Collaboration (Premium, requires sign-in)</td><td>The shared trip: destination, dates, trip types, luggage, travelers, items; member names</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage types and optional bag names, duration, travelers' names, items (with the bag each is in)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Purchases</td><td>Purchase status</td><td>Apple (we never see payment details)</td></tr>
-          <tr><td>Ads (free version only)</td><td>Device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
+          <tr><td>Ads: banner and full-screen (free version only)</td><td>Device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
           <tr><td>App integrity</td><td>Device attestation token</td><td>Apple App Attest and Google Firebase App Check</td></tr>
         </tbody>
       </table>
       </div>
 
       <h2>3. Information stored on your device</h2>
-      <p>Trips (destination, dates, trip types, activities, luggage), travelers' names, packing items, daily outfit plans, templates and your app settings are stored locally on your device, in storage shared only with PackSmart's own widgets. We have no access to them. They are included in your device's iCloud or computer backups under Apple's backup settings. If you create a trip with the AI Trip Planner, the text you typed is stored with that trip on your device so that you can read it again (trip menu → View AI Prompt); it is not synced or shared. Deleting a trip removes it; deleting the app removes all of this data from the device. The exception is a trip you chose to share (see sections 8 and 9), which is also stored on Google Firebase until you stop sharing it.</p>
+      <p>Trips (destination, dates, trip types, activities, luggage and bags), travelers' names, packing items, item photos, daily outfit plans, templates and your app settings are stored locally on your device, in storage shared only with PackSmart's own widgets. We have no access to them. They are included in your device's iCloud or computer backups under Apple's backup settings; item photos (see section 9) are excluded from backups. If you create a trip with the AI Trip Planner, the text you typed is stored with that trip on your device so that you can read it again (trip menu → View AI Prompt); it is not synced or shared. Deleting a trip removes it; deleting the app removes all of this data from the device. The exception is a trip you chose to share (see sections 10 and 11), which is also stored on Google Firebase until you stop sharing it.</p>
 
       <h2>4. Optional account (Sign in with Apple / Google)</h2>
-      <p>You can use PackSmart without an account. If you choose to sign in, authentication is handled by Google Firebase Authentication with Sign in with Apple or Google Sign-In. We receive your name, email address (with Sign in with Apple you may choose Apple's private relay address) and an account identifier. Signing in does not by itself upload your trips and does not grant Premium; trips leave your device only if you use collaboration or list sharing (sections 8 and 9).</p>
+      <p>You can use PackSmart without an account. If you choose to sign in, authentication is handled by Google Firebase Authentication with Sign in with Apple or Google Sign-In. We receive your name, email address (with Sign in with Apple you may choose Apple's private relay address) and an account identifier. Signing in does not by itself upload your trips and does not grant Premium; trips leave your device only if you use collaboration or list sharing (sections 10 and 11).</p>
       <p>If you are signed in and claim the one-time free Premium template (Settings &rarr; Your PackSmart Gift), PackSmart saves which template you chose &mdash; its internal key, such as <em>hiking-wilderness</em> &mdash; and the date you chose it with your account on Google Firebase, so that it is restored if you reinstall the app or sign in on another device and so that only one template can be claimed per account. It is not linked to any review, rating or purchase, and it is deleted together with your account.</p>
       <p>You can delete your account at any time in <strong>Settings → Account → Delete Account</strong>. This deletes your Firebase account and the profile stored on your device, deletes the shared trips you own, the invitation links and the shared list links you created, removes you from the trips you joined, and revokes PackSmart's access to your Apple ID or Google account. With Sign in with Apple you are asked to confirm with your Apple Account first.</p>
 
@@ -71,56 +73,64 @@
       <h2>7. Home map and destination photos</h2>
       <p>The Home screen can show a map of your upcoming destinations. It uses Apple Maps; the destination names you entered are looked up with Apple's services, and the coordinates are stored with the trip on your device. PackSmart never uses your device's location. To show a photo of a destination, the app sends the destination name (and its approximate coordinates) to Wikipedia and Wikimedia Commons, public services of the Wikimedia Foundation, which receive your IP address and the request as any website would. No account or identifier is sent. Photos are shown with their author and licence and cached on your device. See the <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a>.</p>
 
-      <h2>8. Collaboration (Premium)</h2>
-      <p>If you are signed in and choose <strong>Invite to Collaborate</strong>, that trip is published to Google Firebase (Cloud Firestore) so the people you invite can edit it with you in real time. This includes the destination, dates, trip types, activities, luggage, travelers' names, packing items with their packed status, and the name on each member's account. Your other trips stay on your device.</p>
+      <h2>8. Destination suggestions</h2>
+      <p>When you type a destination while creating a trip, PackSmart can suggest places. Once you have typed at least 3 characters, and a moment after you stop typing, the text in the destination field is sent to Apple Maps to get up to 5 suggestions. When you pick a suggestion, its coordinates are stored with the trip on your device. No account identifier and no device location is sent. You can always type any destination yourself instead. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+
+      <h2>9. Photos on packing items</h2>
+      <p>You can add a photo to a packing item by taking one with the camera or by choosing one from your photo library. PackSmart uses the camera only when you choose Take Photo; the permission request reads: “PackSmart uses the camera so you can take a photo of a packing item. Photos stay on your device.” Choosing a photo from the library uses the system photo picker, so PackSmart receives only the photo you select and never accesses the rest of your library.</p>
+      <p>The photo is saved in the app's private storage on your device (the Application Support folder), with location and other metadata removed when it is saved. It is not uploaded to PackSmart or Firebase, and it is not included in shared packing lists or collaboration. Photos are excluded from device backups, including iCloud backup. Removing a photo, deleting its item or trip, or deleting the app removes the photo.</p>
+
+      <h2>10. Collaboration (Premium)</h2>
+      <p>If you are signed in and choose <strong>Invite to Collaborate</strong>, that trip is published to Google Firebase (Cloud Firestore) so the people you invite can edit it with you in real time. This includes the destination, dates, trip types, luggage, travelers' names, packing items with their packed status, and the name on each member's account. Only the trip's main luggage type is shared: individual bags, which bag an item is in, and item photos are not synced, and each person keeps their own. Your other trips stay on your device.</p>
       <p>An invitation link contains a random secret token and is valid for 30 days. Anyone who has the link can open it and, before confirming, sees the destination, dates, trip types, the owner's name and the number of members. You can turn the link off or create a new one at any time; people who already joined keep access. Choosing <strong>Stop Collaborating</strong> or deleting the trip as its owner removes the shared copy for everyone; each person's own copy stays on their device unless they delete it. A member can leave at any time.</p>
 
-      <h2>9. Shared packing lists</h2>
-      <p><strong>Share Packing List</strong> creates a read-only snapshot of one list at the moment you share it: the title, trip types, luggage type, duration in days, travelers' names and the items (name, category, quantity and whom each belongs to). It contains no dates, e-mail address or account identifier. The snapshot is stored on Google Firebase under a random secret token and can be opened by anyone who has the link for up to 90 days, or until you turn the link off. Whoever opens it can import the list as their own independent copy; later changes are not synchronised. Because names are part of the snapshot, please don't put personal or sensitive information in traveler or item names.</p>
+      <h2>11. Shared packing lists</h2>
+      <p><strong>Share Packing List</strong> creates a read-only snapshot of one list at the moment you share it: the title, trip types, luggage types (the main luggage type and, if you use several pieces of luggage, each bag's type and optional name), duration in days, travelers' names and the items (name, category, quantity, whom each belongs to and which bag it is in). Item photos are never included. It contains no dates, e-mail address or account identifier. The snapshot is stored on Google Firebase under a random secret token and can be opened by anyone who has the link for up to 90 days, or until you turn the link off. Whoever opens it can import the list as their own independent copy; later changes are not synchronised. Because names are part of the snapshot, please don't put personal or sensitive information in traveler or item names.</p>
 
-      <h2>10. Purchases</h2>
-      <p>PackSmart Premium is sold through Apple's App Store. Apple processes payments; we never receive your payment details. The app checks your purchase status with Apple to unlock Premium. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+      <h2>12. Purchases</h2>
+      <p>PackSmart Premium is sold through Apple's App Store as a weekly or yearly auto-renewing subscription, or as a one-time lifetime purchase. Subscriptions are managed in your Apple Account settings. Apple processes payments; we never receive your payment details. The app checks your purchase status with Apple to unlock Premium. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-      <h2>11. Advertising (free version only)</h2>
-      <p>The free version shows banner ads served by Google AdMob. PackSmart Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), ad-interaction data and diagnostics to serve, measure and protect ads.</p>
-      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form before ads are personalized; you can change your choice at any time in <strong>Settings → Privacy Choices</strong>. PackSmart does not ask for permission to track you across other companies' apps and websites, so Apple's advertising identifier is not made available. Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+      <h2>13. Advertising (free version only)</h2>
+      <p>The free version shows banner ads and full-screen (interstitial) ads, for example after you complete a trip, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), ad-interaction data and diagnostics to serve, measure and protect ads.</p>
+      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form (Google User Messaging Platform) before ads are personalized; you can change your choice at any time in <strong>Settings → Privacy Choices</strong>. PackSmart does not ask for permission to track you across other companies' apps and websites, so Apple's advertising identifier is not made available. Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
 
-      <h2>12. App integrity and security</h2>
+      <h2>14. App integrity and security</h2>
       <p>To protect the AI service from abuse, requests carry a token from Google Firebase App Check, which uses Apple's App Attest to confirm that they come from a genuine copy of PackSmart. This token does not identify you. To prevent invitation codes from being guessed, our servers count failed code attempts per account for up to an hour.</p>
 
-      <h2>13. Notifications and widgets</h2>
+      <h2>15. Notifications and widgets</h2>
       <p>Trip reminders are scheduled locally on your device only if you enable them and allow notifications. Widgets read a summary of your trips from storage on your device. Neither sends data to us.</p>
 
-      <h2>14. What we don't do</h2>
+      <h2>16. What we don't do</h2>
       <ul>
         <li>We don't sell or rent personal information.</li>
         <li>We don't use analytics or crash-reporting SDKs. If you share crash reports with developers in iOS settings, Apple provides them to us anonymously.</li>
         <li>We don't track you across other companies' apps or websites.</li>
+        <li>We never access your photo library, contacts or location; PackSmart only receives a photo you pick or take for a packing item.</li>
       </ul>
 
-      <h2>15. Legal bases (EU/EEA and UK users)</h2>
+      <h2>17. Legal bases (EU/EEA and UK users)</h2>
       <ul>
         <li><strong>Performance of a contract</strong> — providing the account, Premium features, the AI Trip Planner, weather, collaboration and list sharing you request.</li>
         <li><strong>Consent</strong> — personalized advertising and notifications; you can withdraw consent at any time.</li>
         <li><strong>Legitimate interests</strong> — serving non-personalized ads in the free version, and protecting the app and its services from fraud and abuse.</li>
       </ul>
 
-      <h2>16. Retention</h2>
+      <h2>18. Retention</h2>
       <p>Data on your device stays there until you delete it or the app. Your account data is kept until you delete the account. A shared trip stays on Firebase until its owner stops sharing, deletes the trip or deletes their account; invitation links expire after 30 days and shared list links after 90 days, and a link that expired or was turned off can no longer be opened. Our service providers keep data according to their own policies: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
-      <h2>17. International transfers</h2>
+      <h2>19. International transfers</h2>
       <p>Google and Apple may process data outside your country, including in the United States. These transfers are covered by the providers' safeguards, such as the EU–U.S. Data Privacy Framework and the European Commission's Standard Contractual Clauses.</p>
 
-      <h2>18. Your rights</h2>
+      <h2>20. Your rights</h2>
       <p>Depending on where you live, you may have the right to access, correct, delete or export your personal data, to object to or restrict its processing, and to withdraw consent. Most data never leaves your device, so you control it directly in the app. For anything else, email <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a>. You may also complain to your data protection authority — in Romania, the <a href="https://www.dataprotection.ro">ANSPDCP</a>.</p>
 
-      <h2>19. Children</h2>
+      <h2>21. Children</h2>
       <p>PackSmart is a general-audience app and is not directed at children under 13 (or under 16 where local law sets a higher age). We do not knowingly collect personal information from children.</p>
 
-      <h2>20. Changes</h2>
+      <h2>22. Changes</h2>
       <p>We may update this policy as the app changes. We'll update the effective date above, and for significant changes we'll notify you in the app or through the App Store release notes.</p>
 
-      <h2>21. Contact</h2>
+      <h2>23. Contact</h2>
       <p>Bogdan Antoniu · <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a></p>
     </section>
 
@@ -128,7 +138,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confidențialitate</h1>
-      <p class="meta">În vigoare din 11 octombrie 2026 &middot; Această politică acoperă aplicația PackSmart pentru iPhone și iPad. Pentru Android, vezi <a href="privacy-android.html">Politica de confidențialitate Android</a>.</p>
+      <p class="meta">În vigoare din 12 octombrie 2026 &middot; Această politică acoperă aplicația PackSmart pentru iPhone și iPad. Pentru Android, vezi <a href="privacy-android.html">Politica de confidențialitate Android</a>.</p>
 
       <p>Această politică explică ce informații folosește aplicația PackSmart pentru iPhone și iPad („PackSmart”, „aplicația”), de ce și ce opțiuni aveți. PackSmart vă păstrează implicit călătoriile pe dispozitiv. Doar atunci când alegeți să invitați persoane la o călătorie sau să partajați o listă de bagaje prin link, călătoria sau lista respectivă este stocată și în Google Firebase, pe care îl folosim ca backend. Nu vă vindem datele.</p>
 
@@ -146,20 +156,22 @@
           <tr><td>Planificator AI (Premium)</td><td>Descrierea călătoriei pe care o scrieți</td><td>Google Gemini, prin Firebase AI Logic</td></tr>
           <tr><td>Vremea la destinație (Premium)</td><td>Numele destinației; locația acesteia</td><td>Apple Maps și Apple Weather (WeatherKit)</td></tr>
           <tr><td>Harta de pe ecranul principal și fotografiile destinațiilor</td><td>Numele destinației și coordonatele ei</td><td>Apple Maps; Wikipedia și Wikimedia Commons (Fundația Wikimedia)</td></tr>
-          <tr><td>Colaborare (Premium, necesită autentificare)</td><td>Călătoria partajată: destinație, date, tipuri de călătorie, activități, bagaje, călători, articole; numele membrilor</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
-          <tr><td>Link pentru lista de bagaje (necesită autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de călătorie, bagaje, durată, numele călătorilor, articole</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Sugestii de destinație</td><td>Textul scris în câmpul destinației (de la 3 caractere)</td><td>Apple Maps</td></tr>
+          <tr><td>Fotografii la obiectele din bagaj (opțional)</td><td>O fotografie făcută sau aleasă de dvs. pentru un obiect</td><td>Doar pe dispozitivul dvs. (nu este încărcată niciodată)</td></tr>
+          <tr><td>Colaborare (Premium, necesită autentificare)</td><td>Călătoria partajată: destinație, date, tipuri de călătorie, bagaje, călători, articole; numele membrilor</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Link pentru lista de bagaje (necesită autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de călătorie, tipuri de bagaje și numele opționale ale bagajelor, durată, numele călătorilor, articole (cu bagajul în care se află)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Achiziții</td><td>Starea achiziției</td><td>Apple (nu vedem niciodată datele de plată)</td></tr>
-          <tr><td>Reclame (doar versiunea gratuită)</td><td>Date despre dispozitiv și interacțiunea cu reclamele, locația aproximativă din adresa IP, opțiunea de consimțământ</td><td>Google AdMob</td></tr>
+          <tr><td>Reclame: banner și pe tot ecranul (doar versiunea gratuită)</td><td>Date despre dispozitiv și interacțiunea cu reclamele, locația aproximativă din adresa IP, opțiunea de consimțământ</td><td>Google AdMob</td></tr>
           <tr><td>Integritatea aplicației</td><td>Token de atestare a dispozitivului</td><td>Apple App Attest și Google Firebase App Check</td></tr>
         </tbody>
       </table>
       </div>
 
       <h2>3. Informații stocate pe dispozitiv</h2>
-      <p>Călătoriile (destinație, date, tipuri de călătorie, activități, bagaje), numele călătorilor, articolele de bagaj, planurile de ținute zilnice, șabloanele și setările aplicației sunt stocate local pe dispozitiv, într-un spațiu partajat doar cu widgeturile PackSmart. Nu avem acces la ele. Sunt incluse în backupurile iCloud sau pe computer ale dispozitivului, conform setărilor Apple. Dacă creați o călătorie cu planificatorul AI, textul scris de dvs. este stocat împreună cu acea călătorie pe dispozitiv, ca să îl puteți reciti (meniul călătoriei → Vezi promptul AI); nu este sincronizat și nu este partajat. Ștergerea unei călătorii o elimină; dezinstalarea aplicației elimină toate aceste date de pe dispozitiv. Excepție face o călătorie pe care ați ales să o partajați (vezi secțiunile 8 și 9), care este stocată și în Google Firebase până când opriți partajarea.</p>
+      <p>Călătoriile (destinație, date, tipuri de călătorie, activități, bagaje), numele călătorilor, articolele de bagaj, fotografiile obiectelor, planurile de ținute zilnice, șabloanele și setările aplicației sunt stocate local pe dispozitiv, într-un spațiu partajat doar cu widgeturile PackSmart. Nu avem acces la ele. Sunt incluse în backupurile iCloud sau pe computer ale dispozitivului, conform setărilor Apple; fotografiile obiectelor (vezi secțiunea 9) sunt excluse din backupuri. Dacă creați o călătorie cu planificatorul AI, textul scris de dvs. este stocat împreună cu acea călătorie pe dispozitiv, ca să îl puteți reciti (meniul călătoriei → Vezi promptul AI); nu este sincronizat și nu este partajat. Ștergerea unei călătorii o elimină; dezinstalarea aplicației elimină toate aceste date de pe dispozitiv. Excepție face o călătorie pe care ați ales să o partajați (vezi secțiunile 10 și 11), care este stocată și în Google Firebase până când opriți partajarea.</p>
 
       <h2>4. Cont opțional (Sign in with Apple / Google)</h2>
-      <p>Puteți folosi PackSmart fără cont. Dacă alegeți să vă autentificați, autentificarea este gestionată de Google Firebase Authentication prin Sign in with Apple sau Google Sign-In. Primim numele, adresa de e-mail (cu Sign in with Apple puteți alege adresa privată de redirecționare Apple) și un identificator de cont. Autentificarea nu încarcă, în sine, călătoriile și nu oferă Premium; călătoriile părăsesc dispozitivul doar dacă folosiți colaborarea sau partajarea listelor (secțiunile 8 și 9).</p>
+      <p>Puteți folosi PackSmart fără cont. Dacă alegeți să vă autentificați, autentificarea este gestionată de Google Firebase Authentication prin Sign in with Apple sau Google Sign-In. Primim numele, adresa de e-mail (cu Sign in with Apple puteți alege adresa privată de redirecționare Apple) și un identificator de cont. Autentificarea nu încarcă, în sine, călătoriile și nu oferă Premium; călătoriile părăsesc dispozitivul doar dacă folosiți colaborarea sau partajarea listelor (secțiunile 10 și 11).</p>
       <p>Dacă sunteți autentificat și alegeți șablonul Premium gratuit, oferit o singură dată (Setări → Cadoul tău PackSmart), PackSmart salvează în contul dvs. din Google Firebase care șablon ați ales — cheia lui internă, de exemplu <em>hiking-wilderness</em> — și data alegerii, pentru a fi restabilit dacă reinstalați aplicația sau vă autentificați pe alt dispozitiv și pentru ca un singur șablon să poată fi ales per cont. Nu este legat de nicio recenzie, evaluare sau achiziție și se șterge odată cu contul.</p>
       <p>Vă puteți șterge contul oricând din <strong>Setări → Cont → Ștergeți contul</strong>. Se șterg contul Firebase și profilul stocat pe dispozitiv, călătoriile partajate pe care le dețineți, linkurile de invitație și linkurile pentru liste create de dvs., sunteți eliminat din călătoriile la care v-ați alăturat, iar accesul PackSmart la ID-ul Apple sau la contul Google este revocat. Pentru Sign in with Apple vi se cere mai întâi confirmarea cu contul Apple.</p>
 
@@ -172,56 +184,64 @@
       <h2>7. Harta de pe ecranul principal și fotografiile destinațiilor</h2>
       <p>Ecranul principal poate afișa o hartă cu destinațiile călătoriilor viitoare. Folosește Apple Maps; numele destinațiilor introduse de dvs. sunt căutate cu serviciile Apple, iar coordonatele sunt stocate împreună cu călătoria pe dispozitiv. PackSmart nu folosește niciodată locația dispozitivului. Pentru a afișa o fotografie a destinației, aplicația trimite numele destinației (și coordonatele ei aproximative) către Wikipedia și Wikimedia Commons, servicii publice ale Fundației Wikimedia, care primesc adresa dvs. IP și cererea, ca orice site web. Nu se trimite niciun cont sau identificator. Fotografiile sunt afișate cu autorul și licența lor și sunt păstrate în memoria cache a dispozitivului. Consultați <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Politica de confidențialitate Wikimedia</a>.</p>
 
-      <h2>8. Colaborare (Premium)</h2>
-      <p>Dacă sunteți autentificat și alegeți <strong>Invită la colaborare</strong>, acea călătorie este publicată în Google Firebase (Cloud Firestore), astfel încât persoanele invitate să o poată edita împreună cu dvs. în timp real. Aceasta include destinația, datele, tipurile de călătorie, activitățile, bagajele, numele călătorilor, articolele de bagaj cu starea lor de împachetare și numele din contul fiecărui membru. Celelalte călătorii rămân pe dispozitiv.</p>
+      <h2>8. Sugestii de destinație</h2>
+      <p>Când scrieți o destinație la crearea unei călătorii, PackSmart poate sugera locuri. După ce ați scris cel puțin 3 caractere, la scurt timp după ce vă opriți din scris, textul din câmpul destinației este trimis către Apple Maps pentru a obține până la 5 sugestii. Când alegeți o sugestie, coordonatele ei sunt stocate împreună cu călătoria pe dispozitiv. Nu se trimite niciun identificator de cont și nici locația dispozitivului. Puteți oricând să scrieți singur orice destinație. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a>.</p>
+
+      <h2>9. Fotografii la obiectele din bagaj</h2>
+      <p>Puteți adăuga o fotografie unui obiect din bagaj, făcând-o cu camera sau alegând-o din fototecă. PackSmart folosește camera doar când alegeți Fă o fotografie; permisiunea este cerută cu textul: „PackSmart folosește camera pentru a fotografia un obiect din bagaj. Fotografiile rămân pe dispozitivul tău.” Alegerea unei fotografii din fototecă folosește selectorul de fotografii al sistemului, deci PackSmart primește doar fotografia aleasă de dvs. și nu accesează restul fototecii.</p>
+      <p>Fotografia este salvată în spațiul privat al aplicației de pe dispozitiv (folderul Application Support), iar locația și alte metadate sunt eliminate la salvare. Nu este încărcată către PackSmart sau Firebase și nu este inclusă în listele de bagaje partajate sau în colaborare. Fotografiile sunt excluse din backupurile dispozitivului, inclusiv din backupul iCloud. Eliminarea unei fotografii, ștergerea obiectului sau a călătoriei ori dezinstalarea aplicației șterge fotografia.</p>
+
+      <h2>10. Colaborare (Premium)</h2>
+      <p>Dacă sunteți autentificat și alegeți <strong>Invită la colaborare</strong>, acea călătorie este publicată în Google Firebase (Cloud Firestore), astfel încât persoanele invitate să o poată edita împreună cu dvs. în timp real. Aceasta include destinația, datele, tipurile de călătorie, bagajele, numele călătorilor, articolele de bagaj cu starea lor de împachetare și numele din contul fiecărui membru. Se partajează doar tipul principal de bagaj al călătoriei: bagajele individuale, bagajul în care se află un obiect și fotografiile obiectelor nu se sincronizează, iar fiecare persoană le păstrează pe ale sale. Celelalte călătorii rămân pe dispozitiv.</p>
       <p>Un link de invitație conține un token secret aleatoriu și este valabil 30 de zile. Oricine are linkul îl poate deschide și, înainte de confirmare, vede destinația, datele, tipurile de călătorie, numele proprietarului și numărul de membri. Puteți dezactiva linkul sau crea unul nou oricând; persoanele care s-au alăturat deja își păstrează accesul. Alegerea opțiunii <strong>Oprește colaborarea</strong> sau ștergerea călătoriei de către proprietar elimină copia partajată pentru toți; copia fiecărei persoane rămâne pe dispozitivul ei, dacă nu o șterge. Un membru poate ieși oricând.</p>
 
-      <h2>9. Liste de bagaje partajate</h2>
-      <p><strong>Trimite lista de bagaj</strong> creează un instantaneu doar pentru citire al unei liste, din momentul partajării: titlul, tipurile de călătorie, tipul de bagaj, durata în zile, numele călătorilor și articolele (nume, categorie, cantitate și cui aparține fiecare). Nu conține date calendaristice, adresă de e-mail sau identificator de cont. Instantaneul este stocat în Google Firebase sub un token secret aleatoriu și poate fi deschis de oricine are linkul timp de până la 90 de zile sau până când dezactivați linkul. Cine îl deschide poate importa lista ca pe o copie independentă; modificările ulterioare nu se sincronizează. Deoarece numele fac parte din instantaneu, vă rugăm să nu introduceți informații personale sau sensibile în numele călătorilor sau ale articolelor.</p>
+      <h2>11. Liste de bagaje partajate</h2>
+      <p><strong>Trimite lista de bagaj</strong> creează un instantaneu doar pentru citire al unei liste, din momentul partajării: titlul, tipurile de călătorie, tipurile de bagaje (tipul principal de bagaj și, dacă folosiți mai multe bagaje, tipul și numele opțional al fiecărui bagaj), durata în zile, numele călătorilor și articolele (nume, categorie, cantitate, cui aparține fiecare și în ce bagaj se află). Fotografiile obiectelor nu sunt incluse niciodată. Nu conține date calendaristice, adresă de e-mail sau identificator de cont. Instantaneul este stocat în Google Firebase sub un token secret aleatoriu și poate fi deschis de oricine are linkul timp de până la 90 de zile sau până când dezactivați linkul. Cine îl deschide poate importa lista ca pe o copie independentă; modificările ulterioare nu se sincronizează. Deoarece numele fac parte din instantaneu, vă rugăm să nu introduceți informații personale sau sensibile în numele călătorilor sau ale articolelor.</p>
 
-      <h2>10. Achiziții</h2>
-      <p>PackSmart Premium se vinde prin App Store. Apple procesează plățile; nu primim niciodată datele de plată. Aplicația verifică la Apple starea achiziției pentru a debloca Premium. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a>.</p>
+      <h2>12. Achiziții</h2>
+      <p>PackSmart Premium se vinde prin App Store, ca abonament săptămânal sau anual cu reînnoire automată ori ca achiziție unică pe viață. Abonamentele se gestionează din setările contului Apple. Apple procesează plățile; nu primim niciodată datele de plată. Aplicația verifică la Apple starea achiziției pentru a debloca Premium. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a>.</p>
 
-      <h2>11. Publicitate (doar versiunea gratuită)</h2>
-      <p>Versiunea gratuită afișează bannere publicitare furnizate de Google AdMob. Utilizatorii PackSmart Premium nu generează niciodată cereri de reclame. Google poate colecta informații despre dispozitiv (model, sistem de operare, adresă IP — din care se poate deduce locația aproximativă), date despre interacțiunea cu reclamele și date de diagnostic, pentru a afișa, măsura și proteja reclamele.</p>
-      <p>În UE/SEE, Regatul Unit și Elveția, precum și oriunde este necesar, vi se cere consimțământul prin formularul Google înainte ca reclamele să fie personalizate; vă puteți schimba oricând opțiunea din <strong>Setări → Opțiuni de confidențialitate</strong>. PackSmart nu cere permisiunea de a vă urmări în aplicațiile și site-urile altor companii, deci identificatorul de publicitate Apple nu este disponibil. Aflați mai multe în <a href="https://policies.google.com/technologies/partner-sites">Cum folosește Google informațiile din site-urile sau aplicațiile care îi folosesc serviciile</a>.</p>
+      <h2>13. Publicitate (doar versiunea gratuită)</h2>
+      <p>Versiunea gratuită afișează bannere publicitare și reclame pe tot ecranul (interstițiale), de exemplu după ce finalizați o călătorie, furnizate de Google AdMob. PackSmart Premium elimină toate reclamele: utilizatorii Premium nu generează niciodată cereri de reclame. Google poate colecta informații despre dispozitiv (model, sistem de operare, adresă IP — din care se poate deduce locația aproximativă), date despre interacțiunea cu reclamele și date de diagnostic, pentru a afișa, măsura și proteja reclamele.</p>
+      <p>În UE/SEE, Regatul Unit și Elveția, precum și oriunde este necesar, vi se cere consimțământul prin formularul Google (User Messaging Platform) înainte ca reclamele să fie personalizate; vă puteți schimba oricând opțiunea din <strong>Setări → Opțiuni de confidențialitate</strong>. PackSmart nu cere permisiunea de a vă urmări în aplicațiile și site-urile altor companii, deci identificatorul de publicitate Apple nu este disponibil. Aflați mai multe în <a href="https://policies.google.com/technologies/partner-sites">Cum folosește Google informațiile din site-urile sau aplicațiile care îi folosesc serviciile</a>.</p>
 
-      <h2>12. Integritatea aplicației și securitate</h2>
+      <h2>14. Integritatea aplicației și securitate</h2>
       <p>Pentru a proteja serviciul AI de abuz, cererile conțin un token Google Firebase App Check, care folosește Apple App Attest pentru a confirma că provin dintr-o copie autentică a PackSmart. Acest token nu vă identifică. Pentru a preveni ghicirea codurilor de invitație, serverele noastre numără încercările eșuate cu coduri, pe cont, pentru cel mult o oră.</p>
 
-      <h2>13. Notificări și widgeturi</h2>
+      <h2>15. Notificări și widgeturi</h2>
       <p>Memento-urile pentru călătorii sunt programate local pe dispozitiv, doar dacă le activați și permiteți notificările. Widgeturile citesc un rezumat al călătoriilor din spațiul de stocare de pe dispozitiv. Niciuna dintre aceste funcții nu ne trimite date.</p>
 
-      <h2>14. Ce nu facem</h2>
+      <h2>16. Ce nu facem</h2>
       <ul>
         <li>Nu vindem și nu închiriem informații personale.</li>
         <li>Nu folosim SDK-uri de analiză sau de raportare a erorilor. Dacă partajați rapoarte de erori cu dezvoltatorii din setările iOS, Apple ni le furnizează anonim.</li>
         <li>Nu vă urmărim în aplicațiile sau site-urile altor companii.</li>
+        <li>Nu accesăm niciodată fototeca, contactele sau locația dvs.; PackSmart primește doar o fotografie pe care o alegeți sau o faceți pentru un obiect din bagaj.</li>
       </ul>
 
-      <h2>15. Temeiuri juridice (utilizatori din UE/SEE și Regatul Unit)</h2>
+      <h2>17. Temeiuri juridice (utilizatori din UE/SEE și Regatul Unit)</h2>
       <ul>
         <li><strong>Executarea unui contract</strong> — furnizarea contului, a funcțiilor Premium, a planificatorului AI, a prognozei meteo, a colaborării și a partajării listelor solicitate.</li>
         <li><strong>Consimțământ</strong> — publicitate personalizată și notificări; vă puteți retrage consimțământul oricând.</li>
         <li><strong>Interes legitim</strong> — afișarea de reclame nepersonalizate în versiunea gratuită și protejarea aplicației și a serviciilor împotriva fraudei și abuzului.</li>
       </ul>
 
-      <h2>16. Păstrarea datelor</h2>
+      <h2>18. Păstrarea datelor</h2>
       <p>Datele de pe dispozitiv rămân acolo până le ștergeți sau dezinstalați aplicația. Datele contului sunt păstrate până la ștergerea contului. O călătorie partajată rămâne în Firebase până când proprietarul oprește partajarea, șterge călătoria sau își șterge contul; linkurile de invitație expiră după 30 de zile, iar linkurile pentru liste după 90 de zile, iar un link expirat sau dezactivat nu mai poate fi deschis. Furnizorii noștri păstrează datele conform propriilor politici: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
-      <h2>17. Transferuri internaționale</h2>
+      <h2>19. Transferuri internaționale</h2>
       <p>Google și Apple pot prelucra date în afara țării dvs., inclusiv în Statele Unite. Aceste transferuri sunt acoperite de garanțiile furnizorilor, precum Cadrul UE–SUA privind protecția datelor și Clauzele contractuale standard ale Comisiei Europene.</p>
 
-      <h2>18. Drepturile dvs.</h2>
+      <h2>20. Drepturile dvs.</h2>
       <p>În funcție de locul în care locuiți, puteți avea dreptul de acces, rectificare, ștergere sau portabilitate a datelor, dreptul de a vă opune prelucrării sau de a o restricționa și dreptul de a vă retrage consimțământul. Majoritatea datelor nu părăsesc dispozitivul, deci le controlați direct din aplicație. Pentru orice altă solicitare, scrieți la <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a>. Puteți depune și o plângere la autoritatea de protecție a datelor — în România, <a href="https://www.dataprotection.ro">ANSPDCP</a>.</p>
 
-      <h2>19. Copii</h2>
+      <h2>21. Copii</h2>
       <p>PackSmart este o aplicație pentru public general și nu se adresează copiilor sub 13 ani (sau sub 16 ani, acolo unde legea locală stabilește o vârstă mai mare). Nu colectăm cu bună știință informații personale de la copii.</p>
 
-      <h2>20. Modificări</h2>
+      <h2>22. Modificări</h2>
       <p>Putem actualiza această politică pe măsură ce aplicația se schimbă. Vom actualiza data de mai sus, iar pentru modificări importante vă vom anunța în aplicație sau prin notele de lansare din App Store.</p>
 
-      <h2>21. Contact</h2>
+      <h2>23. Contact</h2>
       <p>Bogdan Antoniu · <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a></p>
     </section>
   </main>

@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy &mdash; Android</h1>
-      <p class="meta">Effective 11 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
+      <p class="meta">Effective 12 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
 
       <p>This policy explains what information the PackSmart app for Android (&ldquo;PackSmart&rdquo;, &ldquo;the app&rdquo;) handles, why, and your choices. PackSmart keeps your trips on your device by default. Only when you choose to invite people to a trip or to share a packing list by link is that trip or list also stored on Google Firebase, which we use as our backend. We do not sell your data.</p>
 
@@ -45,20 +45,22 @@
           <tr><td>AI Trip Planner (Premium)</td><td>The trip description you type</td><td>Google Gemini, via Firebase AI Logic</td></tr>
           <tr><td>Destination weather (Premium)</td><td>Destination name and its coordinates</td><td>Open-Meteo</td></tr>
           <tr><td>Home map and destination photos</td><td>Map: none from your trips, only map tiles; photos: destination name and coordinates</td><td>Google Maps; Wikipedia and Wikimedia Commons (Wikimedia Foundation)</td></tr>
-          <tr><td>Collaboration (Premium, requires sign-in)</td><td>The shared trip: destination, dates, trip types, activities, luggage, travelers, items; member names</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
-          <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage, duration, travelers' names, items</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Destination suggestions</td><td>The text you type in the destination field (from 3 characters)</td><td>Open-Meteo (geocoding)</td></tr>
+          <tr><td>Photos on packing items (optional)</td><td>A photo you take or choose for an item</td><td>Only on your device (never uploaded)</td></tr>
+          <tr><td>Collaboration (Premium, requires sign-in)</td><td>The shared trip: destination, dates, trip types, luggage, travelers, items; member names</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage types and optional bag names, duration, travelers' names, items (with the bag each is in)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Purchases</td><td>Purchase status</td><td>Google Play Billing (we never see payment details)</td></tr>
-          <tr><td>Ads (free version only)</td><td>Advertising ID, device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
+          <tr><td>Ads: banner and full-screen (free version only)</td><td>Advertising ID, device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
           <tr><td>App integrity</td><td>Device attestation token</td><td>Google Play Integrity and Firebase App Check</td></tr>
         </tbody>
       </table>
       </div>
 
       <h2>3. Information stored on your device</h2>
-      <p>Trips (destination, dates, trip types, activities, luggage), travelers' names, packing items, daily outfit plans, templates and your app settings are stored locally on your device. We have no access to them. Depending on your device settings, Android may include them in your Google backup. If you create a trip with the AI Trip Planner, the text you typed is stored with that trip on your device so that you can read it again (trip menu &rarr; View AI Prompt); it is not synced or shared. Deleting a trip removes it; uninstalling the app removes all of this data from the device. The exception is a trip you chose to share (see sections 8 and 9), which is also stored on Google Firebase until you stop sharing it.</p>
+      <p>Trips (destination, dates, trip types, activities, luggage and bags), travelers' names, packing items, item photos, daily outfit plans, templates and your app settings are stored locally on your device. We have no access to them. Depending on your device settings, Android may include them in your Google backup, except item photos (see section 9), which are excluded. If you create a trip with the AI Trip Planner, the text you typed is stored with that trip on your device so that you can read it again (trip menu &rarr; View AI Prompt); it is not synced or shared. Deleting a trip removes it; uninstalling the app removes all of this data from the device. The exception is a trip you chose to share (see sections 10 and 11), which is also stored on Google Firebase until you stop sharing it.</p>
 
       <h2>4. Optional account (Google Sign-In)</h2>
-      <p>You can use PackSmart without an account. If you choose to sign in, authentication is handled by Google Firebase Authentication with Google Sign-In. We receive your name, email address, profile photo URL and an account identifier. Signing in does not by itself upload your trips and does not grant Premium; trips leave your device only if you use collaboration or list sharing (sections 8 and 9).</p>
+      <p>You can use PackSmart without an account. If you choose to sign in, authentication is handled by Google Firebase Authentication with Google Sign-In. We receive your name, email address, profile photo URL and an account identifier. Signing in does not by itself upload your trips and does not grant Premium; trips leave your device only if you use collaboration or list sharing (sections 10 and 11).</p>
       <p>If you are signed in and claim the one-time free Premium template (Settings &rarr; Your PackSmart Gift), PackSmart saves which template you chose &mdash; its internal key, such as <em>hiking-wilderness</em> &mdash; and the date you chose it with your account on Google Firebase, so that it is restored if you reinstall the app or sign in on another device and so that only one template can be claimed per account. It is not linked to any review, rating or purchase, and it is deleted together with your account.</p>
       <p>You can delete your account at any time in <strong>Settings &rarr; Delete Account</strong>, or by following the steps on the <a href="https://packsmart-a6d26.web.app/data/delete-account.html">account deletion page</a>. This deletes your Firebase account, the shared trips you own, the invitation links and the shared list links you created, removes you from the trips you joined, and removes the trips stored on your device. Your Google account and your Google Play purchases are not affected.</p>
 
@@ -72,56 +74,62 @@
       <p>The Home screen can show a map of your upcoming destinations using Google Maps. The coordinates of your destinations are placed on the map on your device; PackSmart never uses your device's location. To load the map, Google receives technical information such as your IP address and device information, under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. To place a destination, its name is looked up with Open-Meteo's geocoding service (section 6), and the resulting coordinates are stored with the trip on your device.</p>
       <p>To show a photo of a destination, the app sends the destination name (and its approximate coordinates) to Wikipedia and Wikimedia Commons, public services of the Wikimedia Foundation, which receive your IP address and the request as any website would. No account or identifier is sent. Photos are shown with their author and licence and cached on your device. See the <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a>.</p>
 
-      <h2>8. Collaboration (Premium)</h2>
-      <p>If you are signed in and choose to invite people to a trip, that trip is published to Google Firebase (Cloud Firestore) so the people you invite can edit it with you in real time. This includes the destination, dates, trip types, activities, luggage, travelers' names, packing items with their packed status, and the name on each member's account. Your other trips stay on your device.</p>
+      <h2>8. Destination suggestions</h2>
+      <p>When you type a destination while creating a trip, PackSmart can suggest places. Once you have typed at least 3 characters, and a moment after you stop typing, the text in the destination field is sent to the geocoding service of <a href="https://open-meteo.com/en/terms">Open-Meteo</a> to get up to 5 suggestions. When you pick a suggestion, its coordinates are stored with the trip on your device. No account identifier and no device location is sent; Open-Meteo receives your IP address and the request as any website would (see section 6). You can always type any destination yourself instead.</p>
+
+      <h2>9. Photos on packing items</h2>
+      <p>You can add a photo to a packing item by taking one with your camera app or by choosing one with the Android system photo picker. PackSmart does not request camera or storage permissions and never browses your photo library: it only receives the photo you pick or take. The photo is saved in the app's private storage on your device, with location and other metadata removed when it is saved. It is not uploaded to PackSmart or Firebase, and it is not included in shared packing lists or collaboration. Item photos are excluded from Android's Auto Backup (Google backup). Removing a photo, deleting its item or trip, or uninstalling the app removes the photo.</p>
+
+      <h2>10. Collaboration (Premium)</h2>
+      <p>If you are signed in and choose to invite people to a trip, that trip is published to Google Firebase (Cloud Firestore) so the people you invite can edit it with you in real time. This includes the destination, dates, trip types, luggage, travelers' names, packing items with their packed status, and the name on each member's account. Only the trip's main luggage type is shared: individual bags, which bag an item is in, and item photos are not synced, and each person keeps their own. Your other trips stay on your device.</p>
       <p>An invitation link contains a random secret token and is valid for 30 days. Anyone who has the link can open it and, before confirming, sees the destination, dates, trip types, the owner's name and the number of members. You can turn the link off or create a new one at any time; people who already joined keep access. Stopping collaboration or deleting the trip as its owner removes the shared copy for everyone; each person's own copy stays on their device unless they delete it. A member can leave at any time.</p>
 
-      <h2>9. Shared packing lists</h2>
-      <p>Sharing a packing list creates a read-only snapshot of one list at the moment you share it: the title, trip types, luggage type, duration in days, travelers' names and the items (name, category, quantity and whom each belongs to). It contains no dates, e-mail address or account identifier. The snapshot is stored on Google Firebase under a random secret token and can be opened by anyone who has the link for up to 90 days, or until you turn the link off. Whoever opens it can import the list as their own independent copy; later changes are not synchronised. Because names are part of the snapshot, please don't put personal or sensitive information in traveler or item names.</p>
+      <h2>11. Shared packing lists</h2>
+      <p>Sharing a packing list creates a read-only snapshot of one list at the moment you share it: the title, trip types, luggage types (the main luggage type and, if you use several pieces of luggage, each bag's type and optional name), duration in days, travelers' names and the items (name, category, quantity, whom each belongs to and which bag it is in). Item photos are never included. It contains no dates, e-mail address or account identifier. The snapshot is stored on Google Firebase under a random secret token and can be opened by anyone who has the link for up to 90 days, or until you turn the link off. Whoever opens it can import the list as their own independent copy; later changes are not synchronised. Because names are part of the snapshot, please don't put personal or sensitive information in traveler or item names.</p>
 
-      <h2>10. Purchases</h2>
-      <p>PackSmart Premium is sold through Google Play. Google processes payments; we never receive your payment details. The app checks your purchase status with Google Play Billing to unlock Premium. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+      <h2>12. Purchases</h2>
+      <p>PackSmart Premium is sold through Google Play as a weekly or yearly auto-renewing subscription, or as a one-time lifetime purchase. Subscriptions are managed in Google Play. Google processes payments; we never receive your payment details. The app checks your purchase status with Google Play Billing to unlock Premium. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-      <h2>11. Advertising (free version only)</h2>
-      <p>The free version shows banner ads served by Google AdMob. PackSmart Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), your Android advertising ID, ad-interaction data and diagnostics to serve, measure and protect ads.</p>
-      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form before ads are shown or personalized; you can change your choice at any time in <strong>Settings &rarr; Privacy options</strong>. You can also reset or delete your advertising ID in your Android settings (Settings &rarr; Privacy &rarr; Ads). Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+      <h2>13. Advertising (free version only)</h2>
+      <p>The free version shows banner ads and full-screen (interstitial) ads, for example after you complete a trip, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), your Android advertising ID, ad-interaction data and diagnostics to serve, measure and protect ads.</p>
+      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form (Google User Messaging Platform) before ads are shown or personalized; you can change your choice at any time in <strong>Settings &rarr; Privacy options</strong>. You can also reset or delete your advertising ID in your Android settings (Settings &rarr; Privacy &rarr; Ads). Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
 
-      <h2>12. App integrity and security</h2>
+      <h2>14. App integrity and security</h2>
       <p>To protect our services from abuse, requests to Firebase (including the AI service, Firestore and Cloud Functions) carry a token from Firebase App Check, which uses Google Play Integrity to confirm that they come from a genuine copy of PackSmart installed from Google Play. This token does not identify you. To prevent invitation codes from being guessed, our servers count failed code attempts per account for up to an hour.</p>
 
-      <h2>13. Notifications</h2>
+      <h2>15. Notifications</h2>
       <p>Trip reminders are scheduled locally on your device only if you enable them and allow notifications; the app also re-schedules them after your device restarts. They do not send data to us.</p>
 
-      <h2>14. What we don't do</h2>
+      <h2>16. What we don't do</h2>
       <ul>
         <li>We don't sell or rent personal information.</li>
         <li>We don't use analytics or crash-reporting SDKs and the app does not send usage analytics. If you share crash data with developers in your Android settings, Google Play provides it to us anonymously.</li>
-        <li>We don't read your device's location, contacts or photos.</li>
+        <li>The app never accesses your photo library, contacts or location; it only receives a photo you pick or take for a packing item.</li>
       </ul>
 
-      <h2>15. Legal bases (EU/EEA and UK users)</h2>
+      <h2>17. Legal bases (EU/EEA and UK users)</h2>
       <ul>
         <li><strong>Performance of a contract</strong> &mdash; providing the account, Premium features, the AI Trip Planner, weather, collaboration and list sharing you request.</li>
         <li><strong>Consent</strong> &mdash; advertising and notifications; you can withdraw consent at any time.</li>
         <li><strong>Legitimate interests</strong> &mdash; protecting the app and its services from fraud and abuse.</li>
       </ul>
 
-      <h2>16. Retention</h2>
+      <h2>18. Retention</h2>
       <p>Data on your device stays there until you delete it or the app. Your account data is kept until you delete the account. A shared trip stays on Firebase until its owner stops sharing, deletes the trip or deletes their account; invitation links expire after 30 days and shared list links after 90 days, and a link that expired or was turned off can no longer be opened. Our service providers keep data according to their own policies: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia</a>.</p>
 
-      <h2>17. International transfers</h2>
+      <h2>19. International transfers</h2>
       <p>Google and the other providers may process data outside your country, including in the United States. These transfers are covered by the providers' safeguards, such as the EU&ndash;U.S. Data Privacy Framework and the European Commission's Standard Contractual Clauses.</p>
 
-      <h2>18. Your rights</h2>
+      <h2>20. Your rights</h2>
       <p>Depending on where you live, you may have the right to access, correct, delete or export your personal data, to object to or restrict its processing, and to withdraw consent. Most data never leaves your device, so you control it directly in the app. You can delete your account in the app or on the <a href="https://packsmart-a6d26.web.app/data/delete-account.html">account deletion page</a>. For anything else, email <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a>. You may also complain to your data protection authority &mdash; in Romania, the ANSPDCP.</p>
 
-      <h2>19. Children</h2>
+      <h2>21. Children</h2>
       <p>PackSmart is a general-audience app and is not directed at children under 13 (or under 16 where local law sets a higher age). We do not knowingly collect personal information from children.</p>
 
-      <h2>20. Changes</h2>
+      <h2>22. Changes</h2>
       <p>We may update this policy as the app changes. We'll update the effective date above, and for significant changes we'll notify you in the app or in the Google Play release notes.</p>
 
-      <h2>21. Contact</h2>
+      <h2>23. Contact</h2>
       <p>Bogdan Antoniu &middot; <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a></p>
     </section>
 
@@ -129,7 +137,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confiden&#539;ialitate &mdash; Android</h1>
-      <p class="meta">&Icirc;n vigoare din 11 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
+      <p class="meta">&Icirc;n vigoare din 12 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
 
       <p>Aceast&#259; politic&#259; explic&#259; ce informa&#539;ii folose&#537;te aplica&#539;ia PackSmart pentru Android (&bdquo;PackSmart&rdquo;, &bdquo;aplica&#539;ia&rdquo;), de ce &#537;i ce op&#539;iuni ave&#539;i. PackSmart v&#259; p&#259;streaz&#259; implicit c&#259;l&#259;toriile pe dispozitiv. Doar atunci c&acirc;nd alege&#539;i s&#259; invita&#539;i persoane la o c&#259;l&#259;torie sau s&#259; partaja&#539;i o list&#259; de bagaje prin link, c&#259;l&#259;toria sau lista respectiv&#259; este stocat&#259; &#537;i &icirc;n Google Firebase, pe care &icirc;l folosim ca backend. Nu v&#259; vindem datele.</p>
 
@@ -147,20 +155,22 @@
           <tr><td>Planificator AI (Premium)</td><td>Descrierea c&#259;l&#259;toriei pe care o scrie&#539;i</td><td>Google Gemini, prin Firebase AI Logic</td></tr>
           <tr><td>Vremea la destina&#539;ie (Premium)</td><td>Numele destina&#539;iei &#537;i coordonatele ei</td><td>Open-Meteo</td></tr>
           <tr><td>Harta de pe ecranul principal &#537;i fotografiile destina&#539;iilor</td><td>Harta: nimic din c&#259;l&#259;toriile dvs., doar por&#539;iuni de hart&#259;; fotografii: numele destina&#539;iei &#537;i coordonatele</td><td>Google Maps; Wikipedia &#537;i Wikimedia Commons (Funda&#539;ia Wikimedia)</td></tr>
-          <tr><td>Colaborare (Premium, necesit&#259; autentificare)</td><td>C&#259;l&#259;toria partajat&#259;: destina&#539;ie, date, tipuri de c&#259;l&#259;torie, activit&#259;&#539;i, bagaje, c&#259;l&#259;tori, articole; numele membrilor</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
-          <tr><td>Link pentru lista de bagaje (necesit&#259; autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de c&#259;l&#259;torie, bagaje, durat&#259;, numele c&#259;l&#259;torilor, articole</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Sugestii de destina&#539;ie</td><td>Textul scris &icirc;n c&acirc;mpul destina&#539;iei (de la 3 caractere)</td><td>Open-Meteo (geocodare)</td></tr>
+          <tr><td>Fotografii la obiectele din bagaj (op&#539;ional)</td><td>O fotografie f&#259;cut&#259; sau aleas&#259; de dvs. pentru un obiect</td><td>Doar pe dispozitivul dvs. (nu este &icirc;nc&#259;rcat&#259; niciodat&#259;)</td></tr>
+          <tr><td>Colaborare (Premium, necesit&#259; autentificare)</td><td>C&#259;l&#259;toria partajat&#259;: destina&#539;ie, date, tipuri de c&#259;l&#259;torie, bagaje, c&#259;l&#259;tori, articole; numele membrilor</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
+          <tr><td>Link pentru lista de bagaje (necesit&#259; autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de c&#259;l&#259;torie, tipuri de bagaje &#537;i numele op&#539;ionale ale bagajelor, durat&#259;, numele c&#259;l&#259;torilor, articole (cu bagajul &icirc;n care se afl&#259;)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Achizi&#539;ii</td><td>Starea achizi&#539;iei</td><td>Google Play Billing (nu vedem niciodat&#259; datele de plat&#259;)</td></tr>
-          <tr><td>Reclame (doar versiunea gratuit&#259;)</td><td>ID-ul de publicitate, date despre dispozitiv &#537;i interac&#539;iunea cu reclamele, loca&#539;ia aproximativ&#259; din adresa IP, op&#539;iunea de consim&#539;&#259;m&acirc;nt</td><td>Google AdMob</td></tr>
+          <tr><td>Reclame: banner &#537;i pe tot ecranul (doar versiunea gratuit&#259;)</td><td>ID-ul de publicitate, date despre dispozitiv &#537;i interac&#539;iunea cu reclamele, loca&#539;ia aproximativ&#259; din adresa IP, op&#539;iunea de consim&#539;&#259;m&acirc;nt</td><td>Google AdMob</td></tr>
           <tr><td>Integritatea aplica&#539;iei</td><td>Token de atestare a dispozitivului</td><td>Google Play Integrity &#537;i Firebase App Check</td></tr>
         </tbody>
       </table>
       </div>
 
       <h2>3. Informa&#539;ii stocate pe dispozitiv</h2>
-      <p>C&#259;l&#259;toriile (destina&#539;ie, date, tipuri de c&#259;l&#259;torie, activit&#259;&#539;i, bagaje), numele c&#259;l&#259;torilor, articolele de bagaj, planurile de ținute zilnice, &#537;abloanele &#537;i set&#259;rile aplica&#539;iei sunt stocate local pe dispozitiv. Nu avem acces la ele. &Icirc;n func&#539;ie de set&#259;rile dispozitivului, Android le poate include &icirc;n backupul Google. Dac&#259; crea&#539;i o c&#259;l&#259;torie cu planificatorul AI, textul scris de dvs. este stocat &icirc;mpreun&#259; cu acea c&#259;l&#259;torie pe dispozitiv, ca s&#259; &icirc;l putea&#539;i reciti (meniul c&#259;l&#259;toriei &rarr; Vezi promptul AI); nu este sincronizat &#537;i nu este partajat. &#536;tergerea unei c&#259;l&#259;torii o elimin&#259;; dezinstalarea aplica&#539;iei elimin&#259; toate aceste date de pe dispozitiv. Excep&#539;ie face o c&#259;l&#259;torie pe care a&#539;i ales s&#259; o partaja&#539;i (vezi sec&#539;iunile 8 &#537;i 9), care este stocat&#259; &#537;i &icirc;n Google Firebase p&acirc;n&#259; c&acirc;nd opri&#539;i partajarea.</p>
+      <p>C&#259;l&#259;toriile (destina&#539;ie, date, tipuri de c&#259;l&#259;torie, activit&#259;&#539;i, bagaje), numele c&#259;l&#259;torilor, articolele de bagaj, fotografiile obiectelor, planurile de ținute zilnice, &#537;abloanele &#537;i set&#259;rile aplica&#539;iei sunt stocate local pe dispozitiv. Nu avem acces la ele. &Icirc;n func&#539;ie de set&#259;rile dispozitivului, Android le poate include &icirc;n backupul Google, cu excep&#539;ia fotografiilor obiectelor (vezi sec&#539;iunea 9), care sunt excluse. Dac&#259; crea&#539;i o c&#259;l&#259;torie cu planificatorul AI, textul scris de dvs. este stocat &icirc;mpreun&#259; cu acea c&#259;l&#259;torie pe dispozitiv, ca s&#259; &icirc;l putea&#539;i reciti (meniul c&#259;l&#259;toriei &rarr; Vezi promptul AI); nu este sincronizat &#537;i nu este partajat. &#536;tergerea unei c&#259;l&#259;torii o elimin&#259;; dezinstalarea aplica&#539;iei elimin&#259; toate aceste date de pe dispozitiv. Excep&#539;ie face o c&#259;l&#259;torie pe care a&#539;i ales s&#259; o partaja&#539;i (vezi sec&#539;iunile 10 &#537;i 11), care este stocat&#259; &#537;i &icirc;n Google Firebase p&acirc;n&#259; c&acirc;nd opri&#539;i partajarea.</p>
 
       <h2>4. Cont op&#539;ional (Google Sign-In)</h2>
-      <p>Pute&#539;i folosi PackSmart f&#259;r&#259; cont. Dac&#259; alege&#539;i s&#259; v&#259; autentifica&#539;i, autentificarea este gestionat&#259; de Google Firebase Authentication prin Google Sign-In. Prim&#259;m numele, adresa de e-mail, adresa URL a pozei de profil &#537;i un identificator de cont. Autentificarea nu &icirc;ncarc&#259;, &icirc;n sine, c&#259;l&#259;toriile &#537;i nu ofer&#259; Premium; c&#259;l&#259;toriile p&#259;r&#259;sesc dispozitivul doar dac&#259; folosi&#539;i colaborarea sau partajarea listelor (sec&#539;iunile 8 &#537;i 9).</p>
+      <p>Pute&#539;i folosi PackSmart f&#259;r&#259; cont. Dac&#259; alege&#539;i s&#259; v&#259; autentifica&#539;i, autentificarea este gestionat&#259; de Google Firebase Authentication prin Google Sign-In. Prim&#259;m numele, adresa de e-mail, adresa URL a pozei de profil &#537;i un identificator de cont. Autentificarea nu &icirc;ncarc&#259;, &icirc;n sine, c&#259;l&#259;toriile &#537;i nu ofer&#259; Premium; c&#259;l&#259;toriile p&#259;r&#259;sesc dispozitivul doar dac&#259; folosi&#539;i colaborarea sau partajarea listelor (sec&#539;iunile 10 &#537;i 11).</p>
       <p>Dac&#259; sunte&#539;i autentificat &#537;i alege&#539;i &#537;ablonul Premium gratuit, oferit o singur&#259; dat&#259; (Set&#259;ri &rarr; Cadoul t&#259;u PackSmart), PackSmart salveaz&#259; &icirc;n contul dvs. din Google Firebase care &#537;ablon a&#539;i ales &mdash; cheia lui intern&#259;, de exemplu <em>hiking-wilderness</em> &mdash; &#537;i data alegerii, pentru a fi restabilit dac&#259; reinstala&#539;i aplica&#539;ia sau v&#259; autentifica&#539;i pe alt dispozitiv &#537;i pentru ca un singur &#537;ablon s&#259; poat&#259; fi ales per cont. Nu este legat de nicio recenzie, evaluare sau achizi&#539;ie &#537;i se &#537;terge odat&#259; cu contul.</p>
       <p>V&#259; pute&#539;i &#537;terge contul oric&acirc;nd din <strong>Set&#259;ri &rarr; &#536;terge contul</strong> sau urm&acirc;nd pa&#537;ii de pe <a href="https://packsmart-a6d26.web.app/data/delete-account.html">pagina de &#537;tergere a contului</a>. Se &#537;terg contul Firebase, c&#259;l&#259;toriile partajate pe care le de&#539;ine&#539;i, linkurile de invita&#539;ie &#537;i linkurile pentru liste create de dvs.; sunte&#539;i elimina&#539;i din c&#259;l&#259;toriile la care v-a&#539;i al&#259;turat, iar c&#259;l&#259;toriile stocate pe dispozitiv se &#537;terg. Contul dvs. Google &#537;i achizi&#539;iile Google Play nu sunt afectate.</p>
 
@@ -174,56 +184,62 @@
       <p>Ecranul principal poate afi&#537;a o hart&#259; cu destina&#539;iile c&#259;l&#259;toriilor viitoare, folosind Google Maps. Coordonatele destina&#539;iilor sunt plasate pe hart&#259; pe dispozitivul dvs.; PackSmart nu folose&#537;te niciodat&#259; loca&#539;ia dispozitivului. Pentru a &icirc;nc&#259;rca harta, Google prime&#537;te informa&#539;ii tehnice precum adresa dvs. IP &#537;i date despre dispozitiv, conform <a href="https://policies.google.com/privacy">Politicii de confiden&#539;ialitate Google</a>. Pentru a plasa o destina&#539;ie, numele ei este c&#259;utat cu serviciul de geocodare Open-Meteo (sec&#539;iunea 6), iar coordonatele ob&#539;inute sunt stocate &icirc;mpreun&#259; cu c&#259;l&#259;toria pe dispozitiv.</p>
       <p>Pentru a afi&#537;a o fotografie a destina&#539;iei, aplica&#539;ia trimite numele destina&#539;iei (&#537;i coordonatele ei aproximative) c&#259;tre Wikipedia &#537;i Wikimedia Commons, servicii publice ale Funda&#539;iei Wikimedia, care primesc adresa dvs. IP &#537;i cererea, ca orice site web. Nu se trimite niciun cont sau identificator. Fotografiile sunt afi&#537;ate cu autorul &#537;i licen&#539;a lor &#537;i sunt p&#259;strate &icirc;n memoria cache a dispozitivului. Consulta&#539;i <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Politica de confiden&#539;ialitate Wikimedia</a>.</p>
 
-      <h2>8. Colaborare (Premium)</h2>
-      <p>Dac&#259; sunte&#539;i autentificat &#537;i alege&#539;i s&#259; invita&#539;i persoane la o c&#259;l&#259;torie, acea c&#259;l&#259;torie este publicat&#259; &icirc;n Google Firebase (Cloud Firestore), astfel &icirc;nc&acirc;t persoanele invitate s&#259; o poat&#259; edita &icirc;mpreun&#259; cu dvs. &icirc;n timp real. Aceasta include destina&#539;ia, datele, tipurile de c&#259;l&#259;torie, activit&#259;&#539;ile, bagajele, numele c&#259;l&#259;torilor, articolele de bagaj cu starea lor de &icirc;mpachetare &#537;i numele din contul fiec&#259;rui membru. Celelalte c&#259;l&#259;torii r&#259;m&acirc;n pe dispozitiv.</p>
+      <h2>8. Sugestii de destina&#539;ie</h2>
+      <p>C&acirc;nd scrie&#539;i o destina&#539;ie la crearea unei c&#259;l&#259;torii, PackSmart poate sugera locuri. Dup&#259; ce a&#539;i scris cel pu&#539;in 3 caractere, la scurt timp dup&#259; ce v&#259; opri&#539;i din scris, textul din c&acirc;mpul destina&#539;iei este trimis c&#259;tre serviciul de geocodare <a href="https://open-meteo.com/en/terms">Open-Meteo</a> pentru a ob&#539;ine p&acirc;n&#259; la 5 sugestii. C&acirc;nd alege&#539;i o sugestie, coordonatele ei sunt stocate &icirc;mpreun&#259; cu c&#259;l&#259;toria pe dispozitiv. Nu se trimite niciun identificator de cont &#537;i nici loca&#539;ia dispozitivului; Open-Meteo prime&#537;te adresa dvs. IP &#537;i cererea, ca orice site web (vezi sec&#539;iunea 6). Pute&#539;i oric&acirc;nd s&#259; scrie&#539;i singur orice destina&#539;ie.</p>
+
+      <h2>9. Fotografii la obiectele din bagaj</h2>
+      <p>Pute&#539;i ad&#259;uga o fotografie unui obiect din bagaj, f&#259;c&acirc;nd-o cu aplica&#539;ia de camer&#259; sau aleg&acirc;nd-o cu selectorul de fotografii al sistemului Android. PackSmart nu cere permisiuni pentru camer&#259; sau pentru stocare &#537;i nu r&#259;sfoie&#537;te niciodat&#259; galeria dvs. foto: prime&#537;te doar fotografia pe care o alege&#539;i sau o face&#539;i. Fotografia este salvat&#259; &icirc;n spa&#539;iul privat al aplica&#539;iei de pe dispozitiv, iar loca&#539;ia &#537;i alte metadate sunt eliminate la salvare. Nu este &icirc;nc&#259;rcat&#259; c&#259;tre PackSmart sau Firebase &#537;i nu este inclus&#259; &icirc;n listele de bagaje partajate sau &icirc;n colaborare. Fotografiile obiectelor sunt excluse din Auto Backup Android (backupul Google). Eliminarea unei fotografii, &#537;tergerea obiectului sau a c&#259;l&#259;toriei ori dezinstalarea aplica&#539;iei &#537;terge fotografia.</p>
+
+      <h2>10. Colaborare (Premium)</h2>
+      <p>Dac&#259; sunte&#539;i autentificat &#537;i alege&#539;i s&#259; invita&#539;i persoane la o c&#259;l&#259;torie, acea c&#259;l&#259;torie este publicat&#259; &icirc;n Google Firebase (Cloud Firestore), astfel &icirc;nc&acirc;t persoanele invitate s&#259; o poat&#259; edita &icirc;mpreun&#259; cu dvs. &icirc;n timp real. Aceasta include destina&#539;ia, datele, tipurile de c&#259;l&#259;torie, bagajele, numele c&#259;l&#259;torilor, articolele de bagaj cu starea lor de &icirc;mpachetare &#537;i numele din contul fiec&#259;rui membru. Se partajeaz&#259; doar tipul principal de bagaj al c&#259;l&#259;toriei: bagajele individuale, bagajul &icirc;n care se afl&#259; un obiect &#537;i fotografiile obiectelor nu se sincronizeaz&#259;, iar fiecare persoan&#259; le p&#259;streaz&#259; pe ale sale. Celelalte c&#259;l&#259;torii r&#259;m&acirc;n pe dispozitiv.</p>
       <p>Un link de invita&#539;ie con&#539;ine un token secret aleatoriu &#537;i este valabil 30 de zile. Oricine are linkul &icirc;l poate deschide &#537;i, &icirc;nainte de confirmare, vede destina&#539;ia, datele, tipurile de c&#259;l&#259;torie, numele proprietarului &#537;i num&#259;rul de membri. Pute&#539;i dezactiva linkul sau crea unul nou oric&acirc;nd; persoanele care s-au al&#259;turat deja &icirc;&#537;i p&#259;streaz&#259; accesul. Oprirea colabor&#259;rii sau &#537;tergerea c&#259;l&#259;toriei de c&#259;tre proprietar elimin&#259; copia partajat&#259; pentru to&#539;i; copia fiec&#259;rei persoane r&#259;m&acirc;ne pe dispozitivul ei, dac&#259; nu o &#537;terge. Un membru poate ie&#537;i oric&acirc;nd.</p>
 
-      <h2>9. Liste de bagaje partajate</h2>
-      <p>Partajarea unei liste de bagaje creeaz&#259; un instantaneu doar pentru citire al unei liste, din momentul partaj&#259;rii: titlul, tipurile de c&#259;l&#259;torie, tipul de bagaj, durata &icirc;n zile, numele c&#259;l&#259;torilor &#537;i articolele (nume, categorie, cantitate &#537;i cui apar&#539;ine fiecare). Nu con&#539;ine date calendaristice, adres&#259; de e-mail sau identificator de cont. Instantaneul este stocat &icirc;n Google Firebase sub un token secret aleatoriu &#537;i poate fi deschis de oricine are linkul timp de p&acirc;n&#259; la 90 de zile sau p&acirc;n&#259; c&acirc;nd dezactiva&#539;i linkul. Cine &icirc;l deschide poate importa lista ca pe o copie independent&#259;; modific&#259;rile ulterioare nu se sincronizeaz&#259;. Deoarece numele fac parte din instantaneu, v&#259; rug&#259;m s&#259; nu introduce&#539;i informa&#539;ii personale sau sensibile &icirc;n numele c&#259;l&#259;torilor sau ale articolelor.</p>
+      <h2>11. Liste de bagaje partajate</h2>
+      <p>Partajarea unei liste de bagaje creeaz&#259; un instantaneu doar pentru citire al unei liste, din momentul partaj&#259;rii: titlul, tipurile de c&#259;l&#259;torie, tipurile de bagaje (tipul principal de bagaj &#537;i, dac&#259; folosi&#539;i mai multe bagaje, tipul &#537;i numele op&#539;ional al fiec&#259;rui bagaj), durata &icirc;n zile, numele c&#259;l&#259;torilor &#537;i articolele (nume, categorie, cantitate, cui apar&#539;ine fiecare &#537;i &icirc;n ce bagaj se afl&#259;). Fotografiile obiectelor nu sunt incluse niciodat&#259;. Nu con&#539;ine date calendaristice, adres&#259; de e-mail sau identificator de cont. Instantaneul este stocat &icirc;n Google Firebase sub un token secret aleatoriu &#537;i poate fi deschis de oricine are linkul timp de p&acirc;n&#259; la 90 de zile sau p&acirc;n&#259; c&acirc;nd dezactiva&#539;i linkul. Cine &icirc;l deschide poate importa lista ca pe o copie independent&#259;; modific&#259;rile ulterioare nu se sincronizeaz&#259;. Deoarece numele fac parte din instantaneu, v&#259; rug&#259;m s&#259; nu introduce&#539;i informa&#539;ii personale sau sensibile &icirc;n numele c&#259;l&#259;torilor sau ale articolelor.</p>
 
-      <h2>10. Achizi&#539;ii</h2>
-      <p>PackSmart Premium se vinde prin Google Play. Google proceseaz&#259; pl&#259;&#539;ile; nu primim niciodat&#259; datele de plat&#259;. Aplica&#539;ia verific&#259; la Google Play Billing starea achizi&#539;iei pentru a debloca Premium. Consulta&#539;i <a href="https://policies.google.com/privacy">Politica de confiden&#539;ialitate Google</a>.</p>
+      <h2>12. Achizi&#539;ii</h2>
+      <p>PackSmart Premium se vinde prin Google Play, ca abonament s&#259;pt&#259;m&acirc;nal sau anual cu re&icirc;nnoire automat&#259; ori ca achizi&#539;ie unic&#259; pe via&#539;&#259;. Abonamentele se gestioneaz&#259; &icirc;n Google Play. Google proceseaz&#259; pl&#259;&#539;ile; nu primim niciodat&#259; datele de plat&#259;. Aplica&#539;ia verific&#259; la Google Play Billing starea achizi&#539;iei pentru a debloca Premium. Consulta&#539;i <a href="https://policies.google.com/privacy">Politica de confiden&#539;ialitate Google</a>.</p>
 
-      <h2>11. Publicitate (doar versiunea gratuit&#259;)</h2>
-      <p>Versiunea gratuit&#259; afi&#537;eaz&#259; bannere publicitare furnizate de Google AdMob. Utilizatorii PackSmart Premium nu genereaz&#259; niciodat&#259; cereri de reclame. Google poate colecta informa&#539;ii despre dispozitiv (model, sistem de operare, adres&#259; IP &mdash; din care se poate deduce loca&#539;ia aproximativ&#259;), ID-ul de publicitate Android, date despre interac&#539;iunea cu reclamele &#537;i date de diagnostic, pentru a afi&#537;a, m&#259;sura &#537;i proteja reclamele.</p>
-      <p>&Icirc;n UE/SEE, Regatul Unit &#537;i Elve&#539;ia, precum &#537;i oriunde este necesar, vi se cere consim&#539;&#259;m&acirc;ntul prin formularul Google &icirc;nainte ca reclamele s&#259; fie afi&#537;ate sau personalizate; v&#259; pute&#539;i schimba oric&acirc;nd op&#539;iunea din <strong>Set&#259;ri &rarr; Op&#539;iuni de confiden&#539;ialitate</strong>. Pute&#539;i reseta sau &#537;terge ID-ul de publicitate &#537;i din set&#259;rile Android (Set&#259;ri &rarr; Confiden&#539;ialitate &rarr; Reclame). Afla&#539;i mai multe &icirc;n <a href="https://policies.google.com/technologies/partner-sites">Cum folose&#537;te Google informa&#539;iile din site-urile sau aplica&#539;iile care &icirc;i folosesc serviciile</a>.</p>
+      <h2>13. Publicitate (doar versiunea gratuit&#259;)</h2>
+      <p>Versiunea gratuit&#259; afi&#537;eaz&#259; bannere publicitare &#537;i reclame pe tot ecranul (intersti&#539;iale), de exemplu dup&#259; ce finaliza&#539;i o c&#259;l&#259;torie, furnizate de Google AdMob. PackSmart Premium elimin&#259; toate reclamele: utilizatorii Premium nu genereaz&#259; niciodat&#259; cereri de reclame. Google poate colecta informa&#539;ii despre dispozitiv (model, sistem de operare, adres&#259; IP &mdash; din care se poate deduce loca&#539;ia aproximativ&#259;), ID-ul de publicitate Android, date despre interac&#539;iunea cu reclamele &#537;i date de diagnostic, pentru a afi&#537;a, m&#259;sura &#537;i proteja reclamele.</p>
+      <p>&Icirc;n UE/SEE, Regatul Unit &#537;i Elve&#539;ia, precum &#537;i oriunde este necesar, vi se cere consim&#539;&#259;m&acirc;ntul prin formularul Google (User Messaging Platform) &icirc;nainte ca reclamele s&#259; fie afi&#537;ate sau personalizate; v&#259; pute&#539;i schimba oric&acirc;nd op&#539;iunea din <strong>Set&#259;ri &rarr; Op&#539;iuni de confiden&#539;ialitate</strong>. Pute&#539;i reseta sau &#537;terge ID-ul de publicitate &#537;i din set&#259;rile Android (Set&#259;ri &rarr; Confiden&#539;ialitate &rarr; Reclame). Afla&#539;i mai multe &icirc;n <a href="https://policies.google.com/technologies/partner-sites">Cum folose&#537;te Google informa&#539;iile din site-urile sau aplica&#539;iile care &icirc;i folosesc serviciile</a>.</p>
 
-      <h2>12. Integritatea aplica&#539;iei &#537;i securitate</h2>
+      <h2>14. Integritatea aplica&#539;iei &#537;i securitate</h2>
       <p>Pentru a proteja serviciile noastre de abuz, cererile c&#259;tre Firebase (inclusiv serviciul AI, Firestore &#537;i Cloud Functions) con&#539;in un token Firebase App Check, care folose&#537;te Google Play Integrity pentru a confirma c&#259; provin dintr-o copie autentic&#259; a PackSmart instalat&#259; din Google Play. Acest token nu v&#259; identific&#259;. Pentru a preveni ghicirea codurilor de invita&#539;ie, serverele noastre num&#259;r&#259; &icirc;ncerc&#259;rile e&#537;uate cu coduri, pe cont, pentru cel mult o or&#259;.</p>
 
-      <h2>13. Notific&#259;ri</h2>
+      <h2>15. Notific&#259;ri</h2>
       <p>Memento-urile pentru c&#259;l&#259;torii sunt programate local pe dispozitiv, doar dac&#259; le activa&#539;i &#537;i permite&#539;i notific&#259;rile; aplica&#539;ia le reprogrameaz&#259; &#537;i dup&#259; repornirea dispozitivului. Ele nu ne trimit date.</p>
 
-      <h2>14. Ce nu facem</h2>
+      <h2>16. Ce nu facem</h2>
       <ul>
         <li>Nu vindem &#537;i nu &icirc;nchiriem informa&#539;ii personale.</li>
         <li>Nu folosim SDK-uri de analiz&#259; sau de raportare a erorilor, iar aplica&#539;ia nu trimite statistici de utilizare. Dac&#259; partaja&#539;i date despre erori cu dezvoltatorii din set&#259;rile Android, Google Play ni le furnizeaz&#259; anonim.</li>
-        <li>Nu citim loca&#539;ia, contactele sau fotografiile dispozitivului.</li>
+        <li>Aplica&#539;ia nu acceseaz&#259; niciodat&#259; galeria foto, contactele sau loca&#539;ia dvs.; prime&#537;te doar o fotografie pe care o alege&#539;i sau o face&#539;i pentru un obiect din bagaj.</li>
       </ul>
 
-      <h2>15. Temeiuri juridice (utilizatori din UE/SEE &#537;i Regatul Unit)</h2>
+      <h2>17. Temeiuri juridice (utilizatori din UE/SEE &#537;i Regatul Unit)</h2>
       <ul>
         <li><strong>Executarea unui contract</strong> &mdash; furnizarea contului, a func&#539;iilor Premium, a planificatorului AI, a prognozei meteo, a colabor&#259;rii &#537;i a partaj&#259;rii listelor solicitate.</li>
         <li><strong>Consim&#539;&#259;m&acirc;nt</strong> &mdash; publicitate &#537;i notific&#259;ri; v&#259; putea&#539;i retrage consim&#539;&#259;m&acirc;ntul oric&acirc;nd.</li>
         <li><strong>Interes legitim</strong> &mdash; protejarea aplica&#539;iei &#537;i a serviciilor &icirc;mpotriva fraudei &#537;i abuzului.</li>
       </ul>
 
-      <h2>16. P&#259;strarea datelor</h2>
+      <h2>18. P&#259;strarea datelor</h2>
       <p>Datele de pe dispozitiv r&#259;m&acirc;n acolo p&acirc;n&#259; le &#537;terge&#539;i sau dezinstala&#539;i aplica&#539;ia. Datele contului sunt p&#259;strate p&acirc;n&#259; la &#537;tergerea contului. O c&#259;l&#259;torie partajat&#259; r&#259;m&acirc;ne &icirc;n Firebase p&acirc;n&#259; c&acirc;nd proprietarul opre&#537;te partajarea, &#537;terge c&#259;l&#259;toria sau &icirc;&#537;i &#537;terge contul; linkurile de invita&#539;ie expir&#259; dup&#259; 30 de zile, iar linkurile pentru liste dup&#259; 90 de zile, iar un link expirat sau dezactivat nu mai poate fi deschis. Furnizorii no&#537;tri p&#259;streaz&#259; datele conform propriilor politici: <a href="https://firebase.google.com/support/privacy">Firebase</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia</a>.</p>
 
-      <h2>17. Transferuri interna&#539;ionale</h2>
+      <h2>19. Transferuri interna&#539;ionale</h2>
       <p>Google &#537;i ceilal&#539;i furnizori pot prelucra date &icirc;n afara &#539;&#259;rii dvs., inclusiv &icirc;n Statele Unite. Aceste transferuri sunt acoperite de garan&#539;iile furnizorilor, precum Cadrul UE&ndash;SUA privind protec&#539;ia datelor &#537;i Clauzele contractuale standard ale Comisiei Europene.</p>
 
-      <h2>18. Drepturile dvs.</h2>
+      <h2>20. Drepturile dvs.</h2>
       <p>&Icirc;n func&#539;ie de locul &icirc;n care loc&#539;i, pute&#539;i avea dreptul de acces, rectificare, &#537;tergere sau portabilitate a datelor, dreptul de a v&#259; opune prelucr&#259;rii sau de a o restric&#539;iona &#537;i dreptul de a v&#259; retrage consim&#539;&#259;m&acirc;ntul. Majoritatea datelor nu p&#259;r&#259;sesc dispozitivul, deci le controla&#539;i direct din aplica&#539;ie. V&#259; pute&#539;i &#537;terge contul din aplica&#539;ie sau pe <a href="https://packsmart-a6d26.web.app/data/delete-account.html">pagina de &#537;tergere a contului</a>. Pentru orice alt&#259; solicitare, scrie&#539;i la <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a>. Pute&#539;i depune &#537;i o pl&acirc;ngere la autoritatea de protec&#539;ie a datelor &mdash; &icirc;n Rom&acirc;nia, ANSPDCP.</p>
 
-      <h2>19. Copii</h2>
+      <h2>21. Copii</h2>
       <p>PackSmart este o aplica&#539;ie pentru public general &#537;i nu se adreseaz&#259; copiilor sub 13 ani (sau sub 16 ani, acolo unde legea local&#259; stabile&#537;te o v&acirc;rst&#259; mai mare). Nu colect&#259;m cu bun&#259; &#537;tiin&#539;&#259; informa&#539;ii personale de la copii.</p>
 
-      <h2>20. Modific&#259;ri</h2>
+      <h2>22. Modific&#259;ri</h2>
       <p>Putem actualiza aceast&#259; politic&#259; pe m&#259;sur&#259; ce aplica&#539;ia se schimb&#259;. Vom actualiza data de mai sus, iar pentru modific&#259;ri importante v&#259; vom anun&#539;a &icirc;n aplica&#539;ie sau prin notele de lansare din Google Play.</p>
 
-      <h2>21. Contact</h2>
+      <h2>23. Contact</h2>
       <p>Bogdan Antoniu &middot; <a href="mailto:packsmart.review@gmail.com">packsmart.review@gmail.com</a></p>
     </section>
   </main>
