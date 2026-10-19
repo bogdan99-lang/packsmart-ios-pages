@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy &mdash; Android</h1>
-      <p class="meta">Effective 12 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
+      <p class="meta">Effective 19 October 2026 &middot; This policy covers the PackSmart app for Android. For iPhone and iPad, see the <a href="privacy.html">iOS Privacy Policy</a>.</p>
 
       <p>This policy explains what information the PackSmart app for Android (&ldquo;PackSmart&rdquo;, &ldquo;the app&rdquo;) handles, why, and your choices. PackSmart keeps your trips on your device by default. Only when you choose to invite people to a trip or to share a packing list by link is that trip or list also stored on Google Firebase, which we use as our backend. We do not sell your data.</p>
 
@@ -51,6 +51,7 @@
           <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage types and optional bag names, duration, travelers' names, items (with the bag each is in)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Purchases</td><td>Purchase status</td><td>Google Play Billing (we never see payment details)</td></tr>
           <tr><td>Ads: banner and full-screen (free version only)</td><td>Advertising ID, device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
+          <tr><td>Usage statistics (free version only, after you agree to ads)</td><td>App interactions and diagnostics, app-instance ID, Advertising ID</td><td>Google Analytics for Firebase</td></tr>
           <tr><td>App integrity</td><td>Device attestation token</td><td>Google Play Integrity and Firebase App Check</td></tr>
         </tbody>
       </table>
@@ -91,8 +92,10 @@
       <p>PackSmart Premium is sold through Google Play as a weekly or yearly auto-renewing subscription, or as a one-time lifetime purchase. Subscriptions are managed in Google Play. Google processes payments; we never receive your payment details. The app checks your purchase status with Google Play Billing to unlock Premium. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
       <h2>13. Advertising (free version only)</h2>
-      <p>The free version shows banner ads and full-screen (interstitial) ads, for example after you complete a trip, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), your Android advertising ID, ad-interaction data and diagnostics to serve, measure and protect ads.</p>
+      <p>The free version shows banner ads, full-screen (interstitial) ads, a native ad card in the template list and an ad when you return to the app, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), your Android advertising ID, ad-interaction data and diagnostics to serve, measure and protect ads.</p>
       <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form (Google User Messaging Platform) before ads are shown or personalized; you can change your choice at any time in <strong>Settings &rarr; Privacy options</strong>. You can also reset or delete your advertising ID in your Android settings (Settings &rarr; Privacy &rarr; Ads). Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+
+      <p>The free version also uses Google Analytics for Firebase, linked to Google AdMob, to understand how the app and its ads are used (for example app opens, screens and ad interactions) and to measure ads. It is switched on only after you have agreed to ads where consent is required, and never for Premium users. It uses device and app identifiers, including the Android advertising ID; it does not receive your trips, destinations, item names, travelers, photos or account details. If you withdraw consent in <strong>Settings &rarr; Privacy options</strong>, collection stops.</p>
 
       <h2>14. App integrity and security</h2>
       <p>To protect our services from abuse, requests to Firebase (including the AI service, Firestore and Cloud Functions) carry a token from Firebase App Check, which uses Google Play Integrity to confirm that they come from a genuine copy of PackSmart installed from Google Play. This token does not identify you. To prevent invitation codes from being guessed, our servers count failed code attempts per account for up to an hour.</p>
@@ -103,7 +106,7 @@
       <h2>16. What we don't do</h2>
       <ul>
         <li>We don't sell or rent personal information.</li>
-        <li>We don't use analytics or crash-reporting SDKs and the app does not send usage analytics. If you share crash data with developers in your Android settings, Google Play provides it to us anonymously.</li>
+        <li>We don't use third-party crash-reporting SDKs. The only analytics is Google Analytics for Firebase described in section 13, for the free version and only after consent. If you share crash data with developers in your Android settings, Google Play provides it to us anonymously.</li>
         <li>The app never accesses your photo library, contacts or location; it only receives a photo you pick or take for a packing item.</li>
       </ul>
 
@@ -137,7 +140,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confiden&#539;ialitate &mdash; Android</h1>
-      <p class="meta">&Icirc;n vigoare din 12 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
+      <p class="meta">&Icirc;n vigoare din 19 octombrie 2026 &middot; Aceast&#259; politic&#259; acoper&#259; aplica&#539;ia PackSmart pentru Android. Pentru iPhone &#537;i iPad, vezi <a href="privacy.html">Politica de confiden&#539;ialitate iOS</a>.</p>
 
       <p>Aceast&#259; politic&#259; explic&#259; ce informa&#539;ii folose&#537;te aplica&#539;ia PackSmart pentru Android (&bdquo;PackSmart&rdquo;, &bdquo;aplica&#539;ia&rdquo;), de ce &#537;i ce op&#539;iuni ave&#539;i. PackSmart v&#259; p&#259;streaz&#259; implicit c&#259;l&#259;toriile pe dispozitiv. Doar atunci c&acirc;nd alege&#539;i s&#259; invita&#539;i persoane la o c&#259;l&#259;torie sau s&#259; partaja&#539;i o list&#259; de bagaje prin link, c&#259;l&#259;toria sau lista respectiv&#259; este stocat&#259; &#537;i &icirc;n Google Firebase, pe care &icirc;l folosim ca backend. Nu v&#259; vindem datele.</p>
 
@@ -161,6 +164,7 @@
           <tr><td>Link pentru lista de bagaje (necesit&#259; autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de c&#259;l&#259;torie, tipuri de bagaje &#537;i numele op&#539;ionale ale bagajelor, durat&#259;, numele c&#259;l&#259;torilor, articole (cu bagajul &icirc;n care se afl&#259;)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Achizi&#539;ii</td><td>Starea achizi&#539;iei</td><td>Google Play Billing (nu vedem niciodat&#259; datele de plat&#259;)</td></tr>
           <tr><td>Reclame: banner &#537;i pe tot ecranul (doar versiunea gratuit&#259;)</td><td>ID-ul de publicitate, date despre dispozitiv &#537;i interac&#539;iunea cu reclamele, loca&#539;ia aproximativ&#259; din adresa IP, op&#539;iunea de consim&#539;&#259;m&acirc;nt</td><td>Google AdMob</td></tr>
+          <tr><td>Statistici de utilizare (doar versiunea gratuit&#259;, dup&#259; ce accepta&#539;i reclamele)</td><td>Interac&#539;iuni cu aplica&#539;ia &#537;i date de diagnostic, ID de instan&#539;&#259; a aplica&#539;iei, ID-ul de publicitate</td><td>Google Analytics for Firebase</td></tr>
           <tr><td>Integritatea aplica&#539;iei</td><td>Token de atestare a dispozitivului</td><td>Google Play Integrity &#537;i Firebase App Check</td></tr>
         </tbody>
       </table>
@@ -201,8 +205,10 @@
       <p>PackSmart Premium se vinde prin Google Play, ca abonament s&#259;pt&#259;m&acirc;nal sau anual cu re&icirc;nnoire automat&#259; ori ca achizi&#539;ie unic&#259; pe via&#539;&#259;. Abonamentele se gestioneaz&#259; &icirc;n Google Play. Google proceseaz&#259; pl&#259;&#539;ile; nu primim niciodat&#259; datele de plat&#259;. Aplica&#539;ia verific&#259; la Google Play Billing starea achizi&#539;iei pentru a debloca Premium. Consulta&#539;i <a href="https://policies.google.com/privacy">Politica de confiden&#539;ialitate Google</a>.</p>
 
       <h2>13. Publicitate (doar versiunea gratuit&#259;)</h2>
-      <p>Versiunea gratuit&#259; afi&#537;eaz&#259; bannere publicitare &#537;i reclame pe tot ecranul (intersti&#539;iale), de exemplu dup&#259; ce finaliza&#539;i o c&#259;l&#259;torie, furnizate de Google AdMob. PackSmart Premium elimin&#259; toate reclamele: utilizatorii Premium nu genereaz&#259; niciodat&#259; cereri de reclame. Google poate colecta informa&#539;ii despre dispozitiv (model, sistem de operare, adres&#259; IP &mdash; din care se poate deduce loca&#539;ia aproximativ&#259;), ID-ul de publicitate Android, date despre interac&#539;iunea cu reclamele &#537;i date de diagnostic, pentru a afi&#537;a, m&#259;sura &#537;i proteja reclamele.</p>
+      <p>Versiunea gratuit&#259; afi&#537;eaz&#259; bannere publicitare, reclame pe tot ecranul (intersti&#539;iale), un card publicitar nativ &#238;n lista de &#537;abloane &#537;i o reclam&#259; c&#226;nd reveni&#539;i &#238;n aplica&#539;ie, furnizate de Google AdMob. PackSmart Premium elimin&#259; toate reclamele: utilizatorii Premium nu genereaz&#259; niciodat&#259; cereri de reclame. Google poate colecta informa&#539;ii despre dispozitiv (model, sistem de operare, adres&#259; IP &mdash; din care se poate deduce loca&#539;ia aproximativ&#259;), ID-ul de publicitate Android, date despre interac&#539;iunea cu reclamele &#537;i date de diagnostic, pentru a afi&#537;a, m&#259;sura &#537;i proteja reclamele.</p>
       <p>&Icirc;n UE/SEE, Regatul Unit &#537;i Elve&#539;ia, precum &#537;i oriunde este necesar, vi se cere consim&#539;&#259;m&acirc;ntul prin formularul Google (User Messaging Platform) &icirc;nainte ca reclamele s&#259; fie afi&#537;ate sau personalizate; v&#259; pute&#539;i schimba oric&acirc;nd op&#539;iunea din <strong>Set&#259;ri &rarr; Op&#539;iuni de confiden&#539;ialitate</strong>. Pute&#539;i reseta sau &#537;terge ID-ul de publicitate &#537;i din set&#259;rile Android (Set&#259;ri &rarr; Confiden&#539;ialitate &rarr; Reclame). Afla&#539;i mai multe &icirc;n <a href="https://policies.google.com/technologies/partner-sites">Cum folose&#537;te Google informa&#539;iile din site-urile sau aplica&#539;iile care &icirc;i folosesc serviciile</a>.</p>
+
+      <p>Versiunea gratuit&#259; folose&#537;te &#537;i Google Analytics for Firebase, conectat la Google AdMob, pentru a &#238;n&#539;elege cum sunt folosite aplica&#539;ia &#537;i reclamele (de exemplu deschideri, ecrane &#537;i interac&#539;iuni cu reclamele) &#537;i pentru a m&#259;sura reclamele. Se activeaz&#259; doar dup&#259; ce a&#539;i acceptat reclamele acolo unde consim&#539;&#259;m&#226;ntul este necesar &#537;i niciodat&#259; pentru utilizatorii Premium. Folose&#537;te identificatori ai dispozitivului &#537;i ai aplica&#539;iei, inclusiv ID-ul de publicitate Android; nu prime&#537;te c&#259;l&#259;toriile, destina&#539;iile, numele obiectelor, c&#259;l&#259;torii, fotografiile sau datele contului dvs. Dac&#259; retrage&#539;i consim&#539;&#259;m&#226;ntul din <strong>Set&#259;ri &rarr; Op&#539;iuni de confiden&#539;ialitate</strong>, colectarea se opre&#537;te.</p>
 
       <h2>14. Integritatea aplica&#539;iei &#537;i securitate</h2>
       <p>Pentru a proteja serviciile noastre de abuz, cererile c&#259;tre Firebase (inclusiv serviciul AI, Firestore &#537;i Cloud Functions) con&#539;in un token Firebase App Check, care folose&#537;te Google Play Integrity pentru a confirma c&#259; provin dintr-o copie autentic&#259; a PackSmart instalat&#259; din Google Play. Acest token nu v&#259; identific&#259;. Pentru a preveni ghicirea codurilor de invita&#539;ie, serverele noastre num&#259;r&#259; &icirc;ncerc&#259;rile e&#537;uate cu coduri, pe cont, pentru cel mult o or&#259;.</p>
@@ -213,7 +219,7 @@
       <h2>16. Ce nu facem</h2>
       <ul>
         <li>Nu vindem &#537;i nu &icirc;nchiriem informa&#539;ii personale.</li>
-        <li>Nu folosim SDK-uri de analiz&#259; sau de raportare a erorilor, iar aplica&#539;ia nu trimite statistici de utilizare. Dac&#259; partaja&#539;i date despre erori cu dezvoltatorii din set&#259;rile Android, Google Play ni le furnizeaz&#259; anonim.</li>
+        <li>Nu folosim SDK-uri ter&#539;e de raportare a erorilor. Singura analiz&#259; este Google Analytics for Firebase descris&#259; &#238;n sec&#539;iunea 13, pentru versiunea gratuit&#259; &#537;i doar dup&#259; consim&#539;&#259;m&#226;nt. Dac&#259; partaja&#539;i date despre erori cu dezvoltatorii din set&#259;rile Android, Google Play ni le furnizeaz&#259; anonim.</li>
         <li>Aplica&#539;ia nu acceseaz&#259; niciodat&#259; galeria foto, contactele sau loca&#539;ia dvs.; prime&#537;te doar o fotografie pe care o alege&#539;i sau o face&#539;i pentru un obiect din bagaj.</li>
       </ul>
 

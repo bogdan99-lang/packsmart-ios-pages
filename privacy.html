@@ -27,7 +27,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 12 October 2026 &middot; This policy covers the PackSmart app for iPhone and iPad. For Android, see the <a href="privacy-android.html">Android Privacy Policy</a>.</p>
+      <p class="meta">Effective 19 October 2026 &middot; This policy covers the PackSmart app for iPhone and iPad. For Android, see the <a href="privacy-android.html">Android Privacy Policy</a>.</p>
 
       <p>This policy explains what information the PackSmart app for iPhone and iPad (“PackSmart”, “the app”) handles, why, and your choices. PackSmart keeps your trips on your device by default. Only when you choose to invite people to a trip or to share a packing list by link is that trip or list also stored on Google Firebase, which we use as our backend. We do not sell your data.</p>
 
@@ -51,6 +51,7 @@
           <tr><td>Shared packing list link (requires sign-in)</td><td>A snapshot of one list: title, trip types, luggage types and optional bag names, duration, travelers' names, items (with the bag each is in)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Purchases</td><td>Purchase status</td><td>Apple (we never see payment details)</td></tr>
           <tr><td>Ads: banner and full-screen (free version only)</td><td>Device and ad-interaction data, approximate location from IP address, consent choice</td><td>Google AdMob</td></tr>
+          <tr><td>Usage statistics (free version only, after you agree to ads)</td><td>App interactions and diagnostics, device identifiers (including the advertising identifier only if you allow tracking)</td><td>Google Analytics for Firebase</td></tr>
           <tr><td>App integrity</td><td>Device attestation token</td><td>Apple App Attest and Google Firebase App Check</td></tr>
         </tbody>
       </table>
@@ -91,8 +92,10 @@
       <p>PackSmart Premium is sold through Apple's App Store as a weekly or yearly auto-renewing subscription, or as a one-time lifetime purchase. Subscriptions are managed in your Apple Account settings. Apple processes payments; we never receive your payment details. The app checks your purchase status with Apple to unlock Premium. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
       <h2>13. Advertising (free version only)</h2>
-      <p>The free version shows banner ads and full-screen (interstitial) ads, for example after you complete a trip, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), ad-interaction data and diagnostics to serve, measure and protect ads.</p>
-      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form (Google User Messaging Platform) before ads are personalized; you can change your choice at any time in <strong>Settings → Privacy Choices</strong>. PackSmart does not ask for permission to track you across other companies' apps and websites, so Apple's advertising identifier is not made available. Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+      <p>The free version shows banner ads, full-screen (interstitial) ads, a native ad card in the template list and an ad when you return to the app, served by Google AdMob. PackSmart Premium removes all ads: Premium users never receive ad requests. Google may collect device information (such as model, operating system and IP address, from which approximate location can be derived), ad-interaction data and diagnostics to serve, measure and protect ads.</p>
+      <p>In the EU/EEA, the UK and Switzerland, and wherever else required, you are asked for consent through Google's consent form (Google User Messaging Platform) before ads are personalized; you can change your choice at any time in <strong>Settings → Privacy Choices</strong>. On iPhone and iPad, the free version may also ask, once, for permission to track you across other companies' apps and websites (Apple's App Tracking Transparency prompt). If you allow it, Google can use Apple's advertising identifier to show you more relevant ads and to measure them; if you decline, you still get every feature and ads are simply less relevant, and Apple's advertising identifier is not made available to the app. You can change this at any time in <strong>iOS Settings → Privacy &amp; Security → Tracking</strong>. Premium users are never asked. Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+
+      <p>The free version also uses Google Analytics for Firebase, linked to Google AdMob, to understand how the app and its ads are used (for example app opens, screens and ad interactions) and to measure ads. It is switched on only after you have agreed to ads where consent is required, and never for Premium users. It uses device and app identifiers; it does not receive your trips, destinations, item names, travelers, photos or account details. If you withdraw consent in <strong>Settings → Privacy Choices</strong>, collection stops.</p>
 
       <h2>14. App integrity and security</h2>
       <p>To protect the AI service from abuse, requests carry a token from Google Firebase App Check, which uses Apple's App Attest to confirm that they come from a genuine copy of PackSmart. This token does not identify you. To prevent invitation codes from being guessed, our servers count failed code attempts per account for up to an hour.</p>
@@ -103,8 +106,8 @@
       <h2>16. What we don't do</h2>
       <ul>
         <li>We don't sell or rent personal information.</li>
-        <li>We don't use analytics or crash-reporting SDKs. If you share crash reports with developers in iOS settings, Apple provides them to us anonymously.</li>
-        <li>We don't track you across other companies' apps or websites.</li>
+        <li>We don't use third-party crash-reporting SDKs. If you share crash reports with developers in iOS settings, Apple provides them to us anonymously. The only analytics is Google Analytics for Firebase described in section 13, for the free version and only after consent.</li>
+        <li>We don't track you across other companies' apps or websites unless you allow it in Apple's tracking prompt (see section 13), and then only for advertising and ad measurement.</li>
         <li>We never access your photo library, contacts or location; PackSmart only receives a photo you pick or take for a packing item.</li>
       </ul>
 
@@ -138,7 +141,7 @@
 
     <section id="ro" lang="ro">
       <h1>Politica de confidențialitate</h1>
-      <p class="meta">În vigoare din 12 octombrie 2026 &middot; Această politică acoperă aplicația PackSmart pentru iPhone și iPad. Pentru Android, vezi <a href="privacy-android.html">Politica de confidențialitate Android</a>.</p>
+      <p class="meta">În vigoare din 19 octombrie 2026 &middot; Această politică acoperă aplicația PackSmart pentru iPhone și iPad. Pentru Android, vezi <a href="privacy-android.html">Politica de confidențialitate Android</a>.</p>
 
       <p>Această politică explică ce informații folosește aplicația PackSmart pentru iPhone și iPad („PackSmart”, „aplicația”), de ce și ce opțiuni aveți. PackSmart vă păstrează implicit călătoriile pe dispozitiv. Doar atunci când alegeți să invitați persoane la o călătorie sau să partajați o listă de bagaje prin link, călătoria sau lista respectivă este stocată și în Google Firebase, pe care îl folosim ca backend. Nu vă vindem datele.</p>
 
@@ -162,6 +165,7 @@
           <tr><td>Link pentru lista de bagaje (necesită autentificare)</td><td>Un instantaneu al unei liste: titlu, tipuri de călătorie, tipuri de bagaje și numele opționale ale bagajelor, durată, numele călătorilor, articole (cu bagajul în care se află)</td><td>Google Firebase (Cloud Firestore, Cloud Functions)</td></tr>
           <tr><td>Achiziții</td><td>Starea achiziției</td><td>Apple (nu vedem niciodată datele de plată)</td></tr>
           <tr><td>Reclame: banner și pe tot ecranul (doar versiunea gratuită)</td><td>Date despre dispozitiv și interacțiunea cu reclamele, locația aproximativă din adresa IP, opțiunea de consimțământ</td><td>Google AdMob</td></tr>
+          <tr><td>Statistici de utilizare (doar versiunea gratuită, după ce acceptați reclamele)</td><td>Interacțiuni cu aplicația și date de diagnostic, identificatori ai dispozitivului (inclusiv identificatorul de publicitate doar dacă permiteți urmărirea)</td><td>Google Analytics for Firebase</td></tr>
           <tr><td>Integritatea aplicației</td><td>Token de atestare a dispozitivului</td><td>Apple App Attest și Google Firebase App Check</td></tr>
         </tbody>
       </table>
@@ -202,8 +206,10 @@
       <p>PackSmart Premium se vinde prin App Store, ca abonament săptămânal sau anual cu reînnoire automată ori ca achiziție unică pe viață. Abonamentele se gestionează din setările contului Apple. Apple procesează plățile; nu primim niciodată datele de plată. Aplicația verifică la Apple starea achiziției pentru a debloca Premium. Consultați <a href="https://www.apple.com/legal/privacy/">Politica de confidențialitate Apple</a>.</p>
 
       <h2>13. Publicitate (doar versiunea gratuită)</h2>
-      <p>Versiunea gratuită afișează bannere publicitare și reclame pe tot ecranul (interstițiale), de exemplu după ce finalizați o călătorie, furnizate de Google AdMob. PackSmart Premium elimină toate reclamele: utilizatorii Premium nu generează niciodată cereri de reclame. Google poate colecta informații despre dispozitiv (model, sistem de operare, adresă IP — din care se poate deduce locația aproximativă), date despre interacțiunea cu reclamele și date de diagnostic, pentru a afișa, măsura și proteja reclamele.</p>
-      <p>În UE/SEE, Regatul Unit și Elveția, precum și oriunde este necesar, vi se cere consimțământul prin formularul Google (User Messaging Platform) înainte ca reclamele să fie personalizate; vă puteți schimba oricând opțiunea din <strong>Setări → Opțiuni de confidențialitate</strong>. PackSmart nu cere permisiunea de a vă urmări în aplicațiile și site-urile altor companii, deci identificatorul de publicitate Apple nu este disponibil. Aflați mai multe în <a href="https://policies.google.com/technologies/partner-sites">Cum folosește Google informațiile din site-urile sau aplicațiile care îi folosesc serviciile</a>.</p>
+      <p>Versiunea gratuită afișează bannere publicitare, reclame pe tot ecranul (interstițiale), un card publicitar nativ în lista de șabloane și o reclamă când reveniți în aplicație, furnizate de Google AdMob. PackSmart Premium elimină toate reclamele: utilizatorii Premium nu generează niciodată cereri de reclame. Google poate colecta informații despre dispozitiv (model, sistem de operare, adresă IP — din care se poate deduce locația aproximativă), date despre interacțiunea cu reclamele și date de diagnostic, pentru a afișa, măsura și proteja reclamele.</p>
+      <p>În UE/SEE, Regatul Unit și Elveția, precum și oriunde este necesar, vi se cere consimțământul prin formularul Google (User Messaging Platform) înainte ca reclamele să fie personalizate; vă puteți schimba oricând opțiunea din <strong>Setări → Opțiuni de confidențialitate</strong>. Pe iPhone și iPad, versiunea gratuită vă poate cere, o singură dată, permisiunea de a vă urmări în aplicațiile și site-urile altor companii (fereastra Apple App Tracking Transparency). Dacă o acordați, Google poate folosi identificatorul de publicitate Apple pentru a vă arăta reclame mai relevante și pentru a le măsura; dacă refuzați, primiți în continuare toate funcțiile, reclamele sunt doar mai puțin relevante, iar identificatorul de publicitate Apple nu este pus la dispoziția aplicației. Puteți schimba oricând această opțiune din <strong>Setări iOS → Confidențialitate și securitate → Urmărire</strong>. Utilizatorii Premium nu sunt întrebați niciodată. Aflați mai multe în <a href="https://policies.google.com/technologies/partner-sites">Cum folosește Google informațiile din site-urile sau aplicațiile care îi folosesc serviciile</a>.</p>
+
+      <p>Versiunea gratuită folosește și Google Analytics for Firebase, conectat la Google AdMob, pentru a înțelege cum sunt folosite aplicația și reclamele (de exemplu deschideri, ecrane și interacțiuni cu reclamele) și pentru a măsura reclamele. Se activează doar după ce ați acceptat reclamele acolo unde consimțământul este necesar și niciodată pentru utilizatorii Premium. Folosește identificatori ai dispozitivului și ai aplicației; nu primește călătoriile, destinațiile, numele obiectelor, călătorii, fotografiile sau datele contului dvs. Dacă retrageți consimțământul din <strong>Setări → Opțiuni de confidențialitate</strong>, colectarea se oprește.</p>
 
       <h2>14. Integritatea aplicației și securitate</h2>
       <p>Pentru a proteja serviciul AI de abuz, cererile conțin un token Google Firebase App Check, care folosește Apple App Attest pentru a confirma că provin dintr-o copie autentică a PackSmart. Acest token nu vă identifică. Pentru a preveni ghicirea codurilor de invitație, serverele noastre numără încercările eșuate cu coduri, pe cont, pentru cel mult o oră.</p>
@@ -214,8 +220,8 @@
       <h2>16. Ce nu facem</h2>
       <ul>
         <li>Nu vindem și nu închiriem informații personale.</li>
-        <li>Nu folosim SDK-uri de analiză sau de raportare a erorilor. Dacă partajați rapoarte de erori cu dezvoltatorii din setările iOS, Apple ni le furnizează anonim.</li>
-        <li>Nu vă urmărim în aplicațiile sau site-urile altor companii.</li>
+        <li>Nu folosim SDK-uri terțe de raportare a erorilor. Dacă partajați rapoarte de erori cu dezvoltatorii din setările iOS, Apple ni le furnizează anonim. Singura analiză este Google Analytics for Firebase descrisă în secțiunea 13, pentru versiunea gratuită și doar după consimțământ.</li>
+        <li>Nu vă urmărim în aplicațiile sau site-urile altor companii decât dacă permiteți acest lucru în fereastra Apple de urmărire (vezi secțiunea 13), și atunci doar pentru publicitate și măsurarea reclamelor.</li>
         <li>Nu accesăm niciodată fototeca, contactele sau locația dvs.; PackSmart primește doar o fotografie pe care o alegeți sau o faceți pentru un obiect din bagaj.</li>
       </ul>
 

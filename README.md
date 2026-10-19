@@ -51,6 +51,12 @@ Repository → Settings → Pages → Source: *Deploy from a branch* → `main` 
    be live. The product id used in code is a proposal until the owner
    approves it. Update the store privacy answers / Data safety form (camera
    and photos stay on the device) and the "contains ads" declarations.
+   The apps also include Google Analytics for Firebase (collection starts only
+   after ad consent, never for Premium) and the iOS app can show Apple's App
+   Tracking Transparency prompt. The App Store "App Privacy" answers (tracking,
+   Device ID, Advertising Data, Product Interaction) and the Play Console
+   Advertising ID declaration / Data safety form must match sections 13 and 16
+   of both privacy policies.
 3. **`app-ads.txt` does not live in this repository's served site.** AdMob only
    reads `app-ads.txt` at the root of a domain, so the live copy is in the
    `bogdan99-lang.github.io` repository (served at
